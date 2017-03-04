@@ -40,7 +40,6 @@ To enable Paroller on element you have to add *data-paroller-factor* to selected
 ### JavaScript
 ```javascript
 $("element").paroller();
-$(window).paroller({ factor: '0.5', type: 'foreground', direction: 'horizontal' });
 ```
 ```javascript
 $(window).paroller({ factor: '0.5', type: 'foreground', direction: 'horizontal' });
