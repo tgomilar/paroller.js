@@ -1,5 +1,4 @@
 # paroller.js
----
 
 A lightweight jQuery plugin that enables parallax scrolling effect.
   - You can use it on elements with background property or on any other element
