@@ -11,7 +11,8 @@ A lightweight jQuery plugin that enables parallax scrolling effect.
 
 ## Install
 Before closing </body> element include:
-1. [jQuery] - jQuery library
+
+1. [jQuery](http://jquery.com/download/)
 2. [jquery.paroller.js](https://github.com/tgomilar/paroller.js/tree/master/dist)
 
 #### Bower
