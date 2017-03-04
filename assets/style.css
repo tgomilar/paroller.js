@@ -1,0 +1,57 @@
+body {
+    position: relative;
+    overflow-x: hidden;
+}
+.logo-arrow {
+    position: absolute;
+    left: 20px;
+    color: transparent;
+    transition: 0.3s;
+    top: calc(50% - 7px);
+    padding: 10px;
+}
+.logo-arrow:before {
+     content: '';
+     position: absolute;
+     border: 2px solid #0275d8;
+     border-width: 0 2px 2px 0;
+     display: inline-block;
+     padding: 0;
+     height: 13px;
+     width: 13px;
+     -webkit-transform: rotate(45deg);
+     transform: rotate(45deg);
+    animation: changeColor 8s linear 2s infinite alternate;
+ }
+
+.logo-arrow:after{
+    content: '';
+    position: absolute;
+    width: 2px;
+    height: 25px;
+    background: #222;
+    top: 0;
+    left: 15px;
+    animation: changePosition 2s linear 2s infinite alternate;
+}
+
+nav {
+    border-bottom: 1px solid rgba(0,0,0,.08);
+}
+#vertical,
+#horizontal {
+    padding: 200px 0;
+}
+/* The animation code */
+@keyframes changeColor {
+    0%   {border-color: #5bc0de;}
+    50%  {border-color: #d9534f;}
+    100% {border-color: #0275d8;}
+}
+
+@keyframes changePosition {
+    0%   {transform: translateY(-10px);}
+    50%  {transform: translateY(-5px);}
+    100% {transform: translateY(0px);}
+}
+

@@ -2,9 +2,377 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="description" content="lightweight jQuery library that enables parallax scrolling effect">
+    <meta name="keywords" content="parallax,scrolling,parallax effect,jQuery,paroller,scroller,scrolling">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">-->
     <title>Paroller.js</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css"
+          integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/style.css">
+    <script src="https://use.fontawesome.com/9576790a31.js"></script>
 </head>
-<body>
 
+<body data-spy="scroll" data-target="#main-navbar" data-offset="-140">
+
+<nav class="navbar navbar-light bg-faded sticky-top navbar-toggleable-md" id="main-navbar">
+    <a class="navbar-brand" href="#">
+        <span class="logo-arrow"></span>
+        <span class="pl-5">Paroller</span>
+        <span class="navbar-text small"> - parallax scrolling jQuery library</span>
+    </a>
+    <div class="collapse navbar-collapse justify-content-end">
+        <ul class="nav nav-pills">
+            <li class="nav-item active">
+                <a class="nav-link" href="#download">Download <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#usage">Usage</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#vertical">Vertical</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#horizontal">Horizontal</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link disabled" href="#">Diagonal</a>
+            </li>
+        </ul>
+
+    </div>
+</nav>
+<div class="container">
+
+    <section id="download" class="jumbotron text-center bg-faded my-5">
+        <div class="container">
+            <h1 class="jumbotron-heading display-5 mb-3">Download</h1>
+            <p class="lead">Paroller is a lightweight jQuery library that enables parallax scrolling effect.</p>
+            <ul class="text-left col-xs-12 col-sm-12 col-md-9 offset-md-2">
+                <li>You can use it on elements with background property or on any other element.</li>
+                <li>While scrolling elements can move: vertical, horizontal, <s>diagonal</s>.</li>
+                <li>Manipulated through <samp>html data-*</samp> attributes.</li>
+                <li>Mobile ready.</li>
+                <li>Easy to use.</li>
+            </ul>
+            <p>
+                <a href="#" class="btn btn-primary btn-lg"><i class="fa fa-download" aria-hidden="true"></i> GitHub</a>
+            </p>
+            <hr class="my-5">
+            <h1 class="jumbotron-heading display-5 mb-3">Install</h1>
+            <div class="text-left  col-xs-12 col-sm-12 col-md-9 offset-md-2">
+
+                <p>Before closing <samp><code>&lt;/body&gt;</code></samp> element include:</p>
+                <dl class="row text-left">
+                    <dt class="col-sm-3">1. jQuery library</dt>
+                    <dd class="col-sm-9">
+                        <a href="http://jquery.com/download/" target="_blank"><i class="fa fa-link"></i> jQuery</a>
+                        <code>&lt;script src="jquery-3.1.1.min.js"&gt;&lt;/script&gt;</code>
+                    </dd>
+                    <dt class="col-sm-3">2. jquery.paroller.js</dt>
+                    <dd class="col-sm-9">
+                        <a href="http://jquery.com/download/" target="_blank"><i class="fa fa-link"></i> Paroller</a>
+                        <code>&lt;script src="jquery.paroller.min.js"&gt;&lt;/script&gt;</code>
+                    </dd>
+
+                    <dt class="col-sm-3">3. Usage</dt>
+                    <dd class="col-sm-9 card">
+                        <div class="card-block">
+                            <code>
+                                $("element").paroller();
+                            </code>
+                            <hr>
+                            <code>
+                                $(window).paroller({ factor: '0.5', type: 'foreground', direction: 'horizontal' });
+                            </code>
+                        </div>
+                    </dd>
+                </dl>
+                <h6>Bower</h6>
+                <div class="card my-3">
+                    <div class="card-block">
+                        <code>$ bower install paroller</code>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="usage" class="jumbotron text-center bg-faded my-5">
+        <div class="container">
+            <h1 class="jumbotron-heading display-5 mb-3">Usage</h1>
+            <p class="lead">
+                To enable Paroller on element you have to add <samp>data-paroller-factor</samp> to selected element.
+                <br>
+                <samp>data-paroller-factor</samp>
+                sets speed and distance of element's parallax effect on scroll. <br>
+                <code>&lt;div data-paroller-factor="0.3"&gt;&lt;/div&gt;</code>
+            </p>
+            <hr class="my-5">
+            <h2>Via data attributes</h2>
+            <div class="my-5">
+                <dl class="row text-left">
+                    <dt class="col-sm-3"><samp>data-paroller-factor</samp></dt>
+                    <dd class="col-sm-9">
+                        This attribute is necessary to invoke <i><samp>jquery.paroller.js</samp></i> functionality. <br>
+                        It sets elements offset and speed. It can be positive (<i><samp>0.3</samp></i>) or negative (<i><samp>-0.3</samp></i>).
+                        Less means slower. <br>
+                        <code>&lt;div data-paroller-factor="0.3"&gt;&lt;/div&gt;</code>
+                    </dd>
+
+                    <dt class="col-sm-3"><samp>data-paroller-type</samp></dt>
+                    <dd class="col-sm-9">
+                        This attribute is optional. <br>
+                        It has two values <i><samp>background</samp></i> and <i><samp>foreground</samp></i>.<br>
+                        If not used, the default value is set to: <i><samp>background</samp></i>. <br>
+                        <code>&lt;div data-paroller-factor="0.3" data-paroller-type="foreground"&gt;&lt;/div&gt;</code>
+                    </dd>
+
+                    <dt class="col-sm-3"><samp>data-paroller-direction</samp></samp></dt>
+                    <dd class="col-sm-9">
+                        This attribute is optional. <br>
+                        It has two <s>three</s> values <i><samp>vertical</samp></i>, <i><samp>horizontal</samp></i>, <i><samp><s>diagonal</s></samp></i>.<br>
+                        If not used, the default value is set to: <i><samp>vertical</samp></i>. <br>
+                        <code>&lt;div data-paroller-factor="0.3"
+                            data-paroller-direction="horizontal"&gt;&lt;/div&gt;</code>
+                    </dd>
+                </dl>
+            </div>
+            <hr class="my-5">
+            <h2>Via JavaScript</h2>
+            <div class="card my-5">
+                <div class="card-block text-left">
+                       <pre>
+                        $(window).paroller({
+                            factor: 0.3,             // multiplier for scrolling speed and offset
+                            type: 'foreground',     // background, foreground
+                            direction: 'horizontal' // vertical, horizontal, TODO: diagonal
+                        });
+                        </pre>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="vertical" class="my-5">
+        <div class="jumbotron text-center bg-faded my-5"
+             style="background: url('http://lorempixel.com/1200/600/abstract/8') no-repeat center;"
+             data-paroller-factor="0.5">
+            <h1 class="heading-1 py-5 text-white">Hello Parallax!</h1>
+            <p class="text-white">data-paroller-factor="0.5"</p>
+        </div>
+        <div class="jumbotron text-center bg-faded my-5"
+             style="background: url('http://lorempixel.com/1200/1200/abstract/0') no-repeat center;"
+             data-paroller-factor="-0.15">
+            <h1 class="heading-1 py-5 text-white">Scrolling is fun!</h1>
+            <p class="text-white">data-paroller-factor="-0.15"</p>
+        </div>
+        <div class="row my-5">
+            <div class="col-4" data-paroller-factor="0.5" data-paroller-type="foreground">
+                <div class="card">
+                    <img class="card-img-top" src="http://lorempixel.com/400/200/abstract/1" alt="Card image cap">
+                    <div class="card-block">
+                        <h4 class="card-title">Card vertical</h4>
+                        <p class="card-text">
+                            <code>data-paroller-factor="0.5" data-paroller-type="foreground"</code>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-4" data-paroller-factor="0.1" data-paroller-type="foreground">
+                <div class="card">
+                    <img class="card-img-top" src="http://lorempixel.com/400/200/abstract/2" alt="Card image cap">
+                    <div class="card-block">
+                        <h4 class="card-title">Card vertical</h4>
+                        <p class="card-text">
+                            <code>data-paroller-factor="0.1" data-paroller-type="foreground"</code>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-4" data-paroller-factor="-0.1" data-paroller-type="foreground">
+                <div class="card">
+                    <img class="card-img-top" src="http://lorempixel.com/400/200/abstract/3" alt="Card image cap">
+                    <div class="card-block">
+                        <h4 class="card-title">Card vertical</h4>
+                        <p class="card-text">
+                            <code>data-paroller-factor="-0.1" data-paroller-type="foreground"</code>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row my-5">
+            <div class="col-4" data-paroller-factor="0.9" data-paroller-type="foreground"
+                 data-paroller-direction="vertical">
+                <div class="card">
+                    <img class="card-img-top" src="http://lorempixel.com/400/200/abstract/3" alt="Card image cap">
+                    <div class="card-block">
+                        <h4 class="card-title">Card vertical</h4>
+                        <p class="card-text">
+                            <code>data-paroller-factor="0.9" data-paroller-type="foreground"
+                                data-paroller-direction="vertical"</code>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-4" data-paroller-factor="0.15" data-paroller-type="foreground"
+                 data-paroller-direction="vertical">
+                <div class="card">
+                    <img class="card-img-top" src="http://lorempixel.com/400/200/abstract/4" alt="Card image cap">
+                    <div class="card-block">
+                        <h4 class="card-title">Card vertical</h4>
+                        <p class="card-text">
+                            <code>data-paroller-factor="0.15" data-paroller-type="foreground"
+                                data-paroller-direction="vertical"</code>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-4" data-paroller-factor="-0.1" data-paroller-type="foreground"
+                 data-paroller-direction="vertical">
+                <div class="card">
+                    <img class="card-img-top" src="http://lorempixel.com/400/200/abstract/5" alt="Card image cap">
+                    <div class="card-block">
+                        <h4 class="card-title">Card vertical</h4>
+                        <p class="card-text">
+                            <code>data-paroller-factor="-0.1" data-paroller-type="foreground"
+                                data-paroller-direction="vertical"</code>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row my-5">
+            <div class="col-6" data-paroller-factor="0.1" data-paroller-type="foreground"
+                 data-paroller-direction="vertical">
+                <div class="card">
+                    <img class="card-img-top" src="http://lorempixel.com/400/200/abstract/6" alt="Card image cap">
+                    <div class="card-block">
+                        <h4 class="card-title">Card vertical</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6" data-paroller-factor="-0.1" data-paroller-type="foreground"
+                 data-paroller-direction="vertical">
+                <div class="card">
+                    <img class="card-img-top" src="http://lorempixel.com/400/200/abstract/7" alt="Card image cap">
+                    <div class="card-block">
+                        <h4 class="card-title">Card vertical</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="horizontal" class="my-5">
+        <div class="jumbotron text-center bg-faded my-5"
+             style="background: url('http://lorempixel.com/1200/600/abstract/8') no-repeat center;"
+             data-paroller-factor="0.5"
+             data-paroller-direction="horizontal">
+            <h1 class="heading-1 py-5 text-white">Ola, horizontal Parallax!</h1>
+            <p class="text-white">data-paroller-factor="0.5"</p>
+        </div>
+        <div class="jumbotron text-center bg-faded my-5"
+             style="background: url('http://lorempixel.com/1200/1200/abstract/5') repeat center;"
+             data-paroller-factor="-0.75"
+             data-paroller-direction="horizontal">
+            <h1 class="heading-1 py-5 text-white">Maybe some horizontal scrolling with repeated background?</h1>
+            <p class="text-white">data-paroller-factor="-0.75"</p>
+        </div>
+        <div class="row my-5">
+            <div class="col-4" data-paroller-factor="-0.3" data-paroller-type="foreground"
+                 data-paroller-direction="horizontal">
+                <div class="card">
+                    <img class="card-img-top" src="http://lorempixel.com/400/200/abstract/1" alt="Card image cap">
+                    <div class="card-block">
+                        <h4 class="card-title">Card horizontal</h4>
+                        <p class="card-text">
+                            <code>data-paroller-factor="-0.3" data-paroller-type="foreground"
+                                data-paroller-direction="horizontal"
+                            </code>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-4" data-paroller-factor="-0.1" data-paroller-type="foreground"
+                 data-paroller-direction="horizontal">
+                <div class="card">
+                    <img class="card-img-top" src="http://lorempixel.com/400/200/abstract/2" alt="Card image cap">
+                    <div class="card-block">
+                        <h4 class="card-title">Card horizontal</h4>
+                        <p class="card-text">
+                            <code>data-paroller-factor="-0.1" data-paroller-type="foreground"
+                                data-paroller-direction="horizontal"</code>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-4" data-paroller-factor="0.1" data-paroller-type="foreground"
+                 data-paroller-direction="horizontal">
+                <div class="card">
+                    <img class="card-img-top" src="http://lorempixel.com/400/200/abstract/3" alt="Card image cap">
+                    <div class="card-block">
+                        <h4 class="card-title">Card horizontal</h4>
+                        <p class="card-text">
+                            <code>data-paroller-factor="0.1" data-paroller-type="foreground"
+                                data-paroller-direction="horizontal"</code>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row my-5">
+            <div class="col-6" data-paroller-factor="-0.2" data-paroller-type="foreground"
+                 data-paroller-direction="horizontal">
+                <div class="card">
+                    <img class="card-img-top" src="http://lorempixel.com/400/200/abstract/6" alt="Card image cap">
+                    <div class="card-block">
+                        <h4 class="card-title">Card horizontal</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6" data-paroller-factor="-0.1" data-paroller-type="foreground"
+                 data-paroller-direction="horizontal">
+                <div class="card">
+                    <img class="card-img-top" src="http://lorempixel.com/400/200/abstract/7" alt="Card image cap">
+                    <div class="card-block">
+                        <h4 class="card-title">Card horizontal</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</div>
+<div class="clearfix"></div>
+<footer class="bg-faded text-muted py-5 mt-5">
+    <div class="container">
+        <p> <b>Happy scrolling!</b></p>
+        <p>Currently v1.0 is under no licence!</p>
+    </div>
+</footer>
+<!-- jQuery -->
+<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js"
+        integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n"
+        crossorigin="anonymous"></script>
+<!-- Bootstrap 4-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"
+        integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb"
+        crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"
+        integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn"
+        crossorigin="anonymous"></script>
+<!--Paroller-->
+<script src="dist/jquery.paroller.js"></script>
+
+<script>
+    $(function () {
+        $(window).paroller();
+        $('body').scrollspy({target: '#main-navbar'});
+    });
+</script>
 </body>
 </html>
