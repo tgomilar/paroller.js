@@ -39,6 +39,7 @@ nav {
 #vertical,
 #horizontal {
     padding: 200px 0;
+    overflow-x: hidden;
 }
 /* The animation code */
 @keyframes changeColor {
