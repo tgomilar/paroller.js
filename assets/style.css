@@ -10,7 +10,7 @@ body {
     top: calc(50% - 7px);
     padding: 10px;
 }
-.logo-arrow:before {
+.logo-arrow:after {
      content: '';
      position: absolute;
      border: 2px solid #0275d8;
@@ -23,18 +23,16 @@ body {
      transform: rotate(45deg);
     animation: changeColor 8s linear 2s infinite alternate;
  }
-
-.logo-arrow:after{
+.logo-arrow:before{
     content: '';
     position: absolute;
     width: 2px;
     height: 25px;
     background: #222;
     top: 0;
-    left: 15px;
+    left: 15.5px;
     animation: changePosition 2s linear 2s infinite alternate;
 }
-
 nav {
     border-bottom: 1px solid rgba(0,0,0,.08);
 }
@@ -48,7 +46,6 @@ nav {
     50%  {border-color: #d9534f;}
     100% {border-color: #0275d8;}
 }
-
 @keyframes changePosition {
     0%   {transform: translateY(-10px);}
     50%  {transform: translateY(-5px);}

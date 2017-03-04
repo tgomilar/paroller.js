@@ -5,7 +5,6 @@
     <meta name="description" content="lightweight jQuery library that enables parallax scrolling effect">
     <meta name="keywords" content="parallax,scrolling,parallax effect,jQuery,paroller,scroller,scrolling">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!--<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">-->
     <title>paroller.js</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css"
           integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
@@ -13,13 +12,13 @@
     <script src="https://use.fontawesome.com/9576790a31.js"></script>
 </head>
 
-<body data-spy="scroll" data-target="#main-navbar" data-offset="-140">
+<body data-spy="scroll" data-target="#main-navbar" data-offset="70">
 
 <nav class="navbar navbar-light bg-faded sticky-top navbar-toggleable-md" id="main-navbar">
     <a class="navbar-brand" href="#">
         <span class="logo-arrow"></span>
         <span class="pl-5">paroller.js</span>
-        <span class="navbar-text small"> - parallax scrolling jQuery library</span>
+        <span class="navbar-text small hidden-xs-down"> - parallax scrolling jQuery library</span>
     </a>
     <div class="collapse navbar-collapse justify-content-end">
         <ul class="nav nav-pills">
@@ -171,7 +170,7 @@
             <p class="text-white">data-paroller-factor="-0.15"</p>
         </div>
         <div class="row my-5">
-            <div class="col-4" data-paroller-factor="0.5" data-paroller-type="foreground">
+            <div class="col col-md-4" data-paroller-factor="0.5" data-paroller-type="foreground">
                 <div class="card">
                     <img class="card-img-top" src="http://lorempixel.com/400/200/abstract/1" alt="Card image cap">
                     <div class="card-block">
@@ -182,7 +181,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-4" data-paroller-factor="0.1" data-paroller-type="foreground">
+            <div class="col col-md-4" data-paroller-factor="0.1" data-paroller-type="foreground">
                 <div class="card">
                     <img class="card-img-top" src="http://lorempixel.com/400/200/abstract/2" alt="Card image cap">
                     <div class="card-block">
@@ -193,7 +192,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-4" data-paroller-factor="-0.1" data-paroller-type="foreground">
+            <div class="col col-md-4" data-paroller-factor="-0.1" data-paroller-type="foreground">
                 <div class="card">
                     <img class="card-img-top" src="http://lorempixel.com/400/200/abstract/3" alt="Card image cap">
                     <div class="card-block">
@@ -206,7 +205,7 @@
             </div>
         </div>
         <div class="row my-5">
-            <div class="col-4" data-paroller-factor="0.9" data-paroller-type="foreground"
+            <div class="col col-md-4" data-paroller-factor="0.9" data-paroller-type="foreground"
                  data-paroller-direction="vertical">
                 <div class="card">
                     <img class="card-img-top" src="http://lorempixel.com/400/200/abstract/3" alt="Card image cap">
@@ -219,7 +218,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-4" data-paroller-factor="0.15" data-paroller-type="foreground"
+            <div class="col col-md-4" data-paroller-factor="0.15" data-paroller-type="foreground"
                  data-paroller-direction="vertical">
                 <div class="card">
                     <img class="card-img-top" src="http://lorempixel.com/400/200/abstract/4" alt="Card image cap">
@@ -232,7 +231,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-4" data-paroller-factor="-0.1" data-paroller-type="foreground"
+            <div class="col col-md-4" data-paroller-factor="-0.1" data-paroller-type="foreground"
                  data-paroller-direction="vertical">
                 <div class="card">
                     <img class="card-img-top" src="http://lorempixel.com/400/200/abstract/5" alt="Card image cap">
@@ -247,7 +246,7 @@
             </div>
         </div>
         <div class="row my-5">
-            <div class="col-6" data-paroller-factor="0.1" data-paroller-type="foreground"
+            <div class="col col-sm-6" data-paroller-factor="0.1" data-paroller-type="foreground"
                  data-paroller-direction="vertical">
                 <div class="card">
                     <img class="card-img-top" src="http://lorempixel.com/400/200/abstract/6" alt="Card image cap">
@@ -256,7 +255,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-6" data-paroller-factor="-0.1" data-paroller-type="foreground"
+            <div class="col col-sm-6" data-paroller-factor="-0.1" data-paroller-type="foreground"
                  data-paroller-direction="vertical">
                 <div class="card">
                     <img class="card-img-top" src="http://lorempixel.com/400/200/abstract/7" alt="Card image cap">
@@ -284,7 +283,7 @@
             <p class="text-white">data-paroller-factor="-0.75"</p>
         </div>
         <div class="row my-5">
-            <div class="col-4" data-paroller-factor="-0.3" data-paroller-type="foreground"
+            <div class="col col-md-4" data-paroller-factor="-0.3" data-paroller-type="foreground"
                  data-paroller-direction="horizontal">
                 <div class="card">
                     <img class="card-img-top" src="http://lorempixel.com/400/200/abstract/1" alt="Card image cap">
@@ -298,7 +297,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-4" data-paroller-factor="-0.1" data-paroller-type="foreground"
+            <div class="col col-md-4" data-paroller-factor="-0.1" data-paroller-type="foreground"
                  data-paroller-direction="horizontal">
                 <div class="card">
                     <img class="card-img-top" src="http://lorempixel.com/400/200/abstract/2" alt="Card image cap">
@@ -311,7 +310,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-4" data-paroller-factor="0.1" data-paroller-type="foreground"
+            <div class="col col-md-4" data-paroller-factor="0.1" data-paroller-type="foreground"
                  data-paroller-direction="horizontal">
                 <div class="card">
                     <img class="card-img-top" src="http://lorempixel.com/400/200/abstract/3" alt="Card image cap">
@@ -327,7 +326,7 @@
         </div>
 
         <div class="row my-5">
-            <div class="col-6" data-paroller-factor="-0.2" data-paroller-type="foreground"
+            <div class="col col-sm-6" data-paroller-factor="-0.2" data-paroller-type="foreground"
                  data-paroller-direction="horizontal">
                 <div class="card">
                     <img class="card-img-top" src="http://lorempixel.com/400/200/abstract/6" alt="Card image cap">
@@ -336,7 +335,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-6" data-paroller-factor="-0.1" data-paroller-type="foreground"
+            <div class="col col-sm-6" data-paroller-factor="-0.1" data-paroller-type="foreground"
                  data-paroller-direction="horizontal">
                 <div class="card">
                     <img class="card-img-top" src="http://lorempixel.com/400/200/abstract/7" alt="Card image cap">
