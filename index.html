@@ -2,7 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="description" content="lightweight jQuery plugin that enables parallax scrolling effect">
+    <meta name="description" content="lightweight jQuery plugin that enables parallax scrolling effect on elements
+                                      ">
     <meta name="keywords" content="paroller.js,jquery plugin,parallax,scrolling,parallax effect,jQuery,paroller,scroller,scrolling">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="google-site-verification" content="TWTDG5sHkQOekIFUa5uWVmi7yO3pJTU7AGMaIPajIHc" />
@@ -77,7 +78,7 @@
                         <code>&lt;script src="jquery.paroller.min.js"&gt;&lt;/script&gt;</code>
                     </dd>
 
-                    <dt class="col-sm-3">3. Usage</dt>
+                    <dt class="col-sm-3">3. Use</dt>
                     <dd class="col-sm-9 card">
                         <div class="card-block">
                             <code>
@@ -105,7 +106,7 @@
         <div class="container">
             <h1 class="jumbotron-heading display-5 mb-3">Usage</h1>
             <p class="lead">
-                To enable Paroller on element you have to add <samp>data-paroller-factor</samp> to selected element.
+                To enable parallax scrolling effect on element you have to use <samp>data-paroller-factor</samp> attribute on selected element.
                 <br>
                 <samp>data-paroller-factor</samp>
                 sets speed and distance of element's parallax effect on scroll. <br>
@@ -117,7 +118,7 @@
                 <dl class="row text-left">
                     <dt class="col-sm-3"><samp>data-paroller-factor</samp></dt>
                     <dd class="col-sm-9">
-                        This attribute is necessary to invoke <i><samp>jquery.paroller.js</samp></i> functionality. <br>
+                        This attribute is necessary to enable <i><samp>jquery.paroller.js</samp></i> parallax scrolling effect. <br>
                         It sets elements offset and speed. It can be positive (<i><samp>0.3</samp></i>) or negative (<i><samp>-0.3</samp></i>).
                         Less means slower. <br>
                         <code>&lt;div data-paroller-factor="0.3"&gt;&lt;/div&gt;</code>
@@ -127,15 +128,15 @@
                     <dd class="col-sm-9">
                         This attribute is optional. <br>
                         It has two values <i><samp>background</samp></i> and <i><samp>foreground</samp></i>.<br>
-                        If not used, the default value is set to: <i><samp>background</samp></i>. <br>
+                        If not used the default value is set to: <i><samp>background</samp></i>. <br>
                         <code>&lt;div data-paroller-factor="0.3" data-paroller-type="foreground"&gt;&lt;/div&gt;</code>
                     </dd>
 
-                    <dt class="col-sm-3"><samp>data-paroller-direction</samp></samp></dt>
+                    <dt class="col-sm-3"><samp>data-paroller-direction</samp></dt>
                     <dd class="col-sm-9">
                         This attribute is optional. <br>
                         It has two <s>three</s> values <i><samp>vertical</samp></i>, <i><samp>horizontal</samp></i>, <i><samp><s>diagonal</s></samp></i>.<br>
-                        If not used, the default value is set to: <i><samp>vertical</samp></i>. <br>
+                        If not used the default value is set to: <i><samp>vertical</samp></i>. <br>
                         <code>&lt;div data-paroller-factor="0.3"
                             data-paroller-direction="horizontal"&gt;&lt;/div&gt;</code>
                     </dd>
