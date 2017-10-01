@@ -30,7 +30,7 @@ body {
     height: 25px;
     background: #222;
     top: 0;
-    left: 15.5px;
+    left: 15px;
     animation: changePosition 2s linear 2s infinite alternate;
 }
 nav {
@@ -40,7 +40,6 @@ nav {
 #horizontal {
     padding: 200px 0;
 }
-/* The animation code */
 @keyframes changeColor {
     0%   {border-color: #5bc0de;}
     50%  {border-color: #d9534f;}
