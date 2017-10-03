@@ -10,7 +10,7 @@ A lightweight jQuery plugin that enables parallax scrolling effect.
 **DEMO:** [example page](https://tgomilar.github.io/paroller.js/)
 
 ## Install
-Before closing </body> element include:
+Before closing ```</body>``` element include:
 
 1. [jQuery](http://jquery.com/download/)
 2. [jquery.paroller.js](https://github.com/tgomilar/paroller.js/tree/master/dist)
@@ -22,7 +22,12 @@ $ bower install paroller.js
 ```
 #### Run
 ```javascript
+// initialize paroller.js
 $("body").paroller();
+```
+```html
+<!-- select element -->
+<div data-paroller-factor="0.3"></div>
 ```
 
 ## Usage
