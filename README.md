@@ -1,5 +1,7 @@
 # paroller.js
 
+[![npm](https://img.shields.io/npm/v/paroller.js.svg)](https://www.npmjs.com/package/paroller.js)
+
 A lightweight jQuery plugin that enables parallax scrolling effect.
   - You can use it on elements with background property or on any other element
   - While scrolling elements can move: vertical, horizontal
@@ -15,11 +17,16 @@ Before closing ```</body>``` element include:
 1. [jQuery](http://jquery.com/download/)
 2. [jquery.paroller.js](https://github.com/tgomilar/paroller.js/tree/master/dist)
 
-#### Bower
 
+#### npm
+```sh
+$ npm install paroller.js
+```
+#### Bower
 ```sh
 $ bower install paroller.js
 ```
+
 #### Run
 ```javascript
 // initialize paroller.js
