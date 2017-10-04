@@ -44,10 +44,12 @@ To enable Paroller on element you have to add *data-paroller-factor* to selected
 
 ### JavaScript
 ```javascript
-$("element").paroller();
+// initialize paroller.js
+$(window).paroller();
 ```
 ```javascript
-$(window).paroller({ factor: '0.5', type: 'foreground', direction: 'horizontal' });
+// initialize paroller.js and set attributes for #element
+$("#element").paroller({ factor: '0.5', type: 'foreground', direction: 'horizontal' });
 ```
 
 ### Todos
