@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="lightweight jQuery plugin that enables parallax scrolling effect on elements">
-    <meta name="keywords" content="paroller.js,jquery plugin,parallax,scrolling,parallax effect,jQuery,paroller,scroller,scrolling">
+    <meta name="keywords" content="paroller.js,jquery plugin,parallax,scrolling,parallax effect,jQuery,paroller,scroller,scrolling, paroller js, paroller jquery">
     <meta name="google-site-verification" content="TWTDG5sHkQOekIFUa5uWVmi7yO3pJTU7AGMaIPajIHc" />
     <title>paroller.js</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css"
@@ -22,7 +22,7 @@
         <span class="navbar-text small hidden-xs-down"> - parallax scrolling jQuery plugin</span>
     </a>
     <div class="collapse navbar-collapse justify-content-end">
-        <ul class="nav nav-pills">
+        <ul class="nav nav-pills align-items-center">
             <li class="nav-item active">
                 <a class="nav-link" href="#download">Download <span class="sr-only">(current)</span></a>
             </li>
@@ -36,10 +36,11 @@
                 <a class="nav-link" href="#horizontal">Horizontal</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link disabled" href="#">Diagonal</a>
+                <a href="https://github.com/tgomilar/paroller.js/" class="mx-2">
+                    <i class="fa fa-github fa-2x"></i>
+                </a>
             </li>
         </ul>
-
     </div>
 </nav>
 <div class="container">
@@ -47,10 +48,10 @@
     <section id="download" class="jumbotron text-center bg-faded my-5">
         <div class="container">
             <h1 class="jumbotron-heading display-5 mb-3">Download</h1>
-            <p class="lead">paroller.js is a lightweight jQuery plugin that enables parallax scrolling effect.</p>
+            <p class="lead col-8 mx-auto">paroller.js is a lightweight jQuery plugin that enables parallax scrolling effect on elements that have <i>data-paroller-factor</i>.</p>
             <ul class="text-left col-xs-12 col-sm-12 col-md-9 offset-md-2">
                 <li>You can use it on elements with background property or on any other element.</li>
-                <li>While scrolling elements can move: vertical, horizontal, <s>diagonal</s>.</li>
+                <li>While scrolling elements can move: vertical, horizontal.</li>
                 <li>Manipulated through <samp>html data-*</samp> attributes.</li>
                 <li>Mobile ready.</li>
                 <li>Easy to use.</li>
@@ -60,7 +61,6 @@
                     <i class="fa fa-github" aria-hidden="true"></i> GitHub</a>
                 <a href="https://github.com/tgomilar/paroller.js/archive/master.zip" class="btn btn-primary btn-lg my-2">
                     <i class="fa fa-download" aria-hidden="true"></i> Download</a>
-
             </p>
             <hr class="my-5">
             <h1 class="jumbotron-heading display-5 mb-3">Install</h1>
@@ -84,22 +84,34 @@
                     <dd class="col-sm-9 card">
                         <div class="card-block">
                             <code>
-                                $("element").paroller();
+                                // initialize paroller.js
+                                <br>
+                                $(window).paroller();
                             </code>
                             <hr>
                             <code>
-                                $(window).paroller({ factor: '0.5', type: 'foreground', direction: 'horizontal' });
+                                // initialize paroller.js and set attributes for .my-element
+                                $(".my-element").paroller({ factor: '0.5', type: 'foreground', direction: 'horizontal' });
                             </code>
+                            <hr>
+                            <code>// select element <br></code>
+                            <code>&lt;div data-paroller-factor="0.3"&gt;&lt;/div&gt;</code>
+
                         </div>
                     </dd>
                 </dl>
+                <h6>npm</h6>
+                <div class="card my-3">
+                    <div class="card-block">
+                        <code>$ npm install paroller.js</code>
+                    </div>
+                </div>
                 <h6>Bower</h6>
                 <div class="card my-3">
                     <div class="card-block">
                         <code>$ bower install paroller.js</code>
                     </div>
                 </div>
-
             </div>
         </div>
     </section>
@@ -137,7 +149,7 @@
                     <dt class="col-sm-3"><samp>data-paroller-direction</samp></dt>
                     <dd class="col-sm-9">
                         This attribute is optional. <br>
-                        It has two <s>three</s> values <i><samp>vertical</samp></i>, <i><samp>horizontal</samp></i>, <i><samp><s>diagonal</s></samp></i>.<br>
+                        It has two values <i><samp>vertical</samp></i>, <i><samp>horizontal</samp></i>.<br>
                         If not used the default value is set to: <i><samp>vertical</samp></i>. <br>
                         <code>&lt;div data-paroller-factor="0.3"
                             data-paroller-direction="horizontal"&gt;&lt;/div&gt;</code>
@@ -149,10 +161,12 @@
             <div class="card my-5">
                 <div class="card-block text-left">
                        <pre>
-                        $(window).paroller({
+                        // initialize paroller.js and set attributes for #my-element
+
+                        $("#my-element").paroller({
                             factor: 0.3,            // multiplier for scrolling speed and offset
                             type: 'foreground',     // background, foreground
-                            direction: 'horizontal' // vertical, horizontal, TODO: diagonal
+                            direction: 'horizontal' // vertical, horizontal
                         });
                         </pre>
                 </div>
@@ -162,13 +176,13 @@
 
     <section id="vertical" class="my-5">
         <div class="jumbotron text-center bg-faded my-5"
-             style="background: url('http://lorempixel.com/1200/600/abstract/8') no-repeat center;"
+             style="background: url('https://unsplash.it/1200/600?image=1015') no-repeat center;"
              data-paroller-factor="0.5">
             <h1 class="heading-1 py-5 text-white">Hello Parallax!</h1>
             <p class="text-white">data-paroller-factor="0.5"</p>
         </div>
         <div class="jumbotron text-center bg-faded my-5"
-             style="background: url('http://lorempixel.com/1200/1200/abstract/0') no-repeat center;"
+             style="background: url('https://unsplash.it/1200/800?image=974') no-repeat center;"
              data-paroller-factor="-0.15">
             <h1 class="heading-1 py-5 text-white">Scrolling is fun!</h1>
             <p class="text-white">data-paroller-factor="-0.15"</p>
@@ -176,7 +190,7 @@
         <div class="row my-5">
             <div class="col col-md-4" data-paroller-factor="0.5" data-paroller-type="foreground">
                 <div class="card">
-                    <img class="card-img-top" src="http://lorempixel.com/400/200/abstract/1" alt="Card image cap">
+                    <img class="card-img-top" src="https://unsplash.it/400/200/?image=1024" alt="Card image cap">
                     <div class="card-block">
                         <h4 class="card-title">Card vertical</h4>
                         <p class="card-text">
@@ -187,7 +201,7 @@
             </div>
             <div class="col col-md-4" data-paroller-factor="0.1" data-paroller-type="foreground">
                 <div class="card">
-                    <img class="card-img-top" src="http://lorempixel.com/400/200/abstract/2" alt="Card image cap">
+                    <img class="card-img-top" src="https://unsplash.it/400/200/?image=1023" alt="Card image cap">
                     <div class="card-block">
                         <h4 class="card-title">Card vertical</h4>
                         <p class="card-text">
@@ -198,7 +212,7 @@
             </div>
             <div class="col col-md-4" data-paroller-factor="-0.1" data-paroller-type="foreground">
                 <div class="card">
-                    <img class="card-img-top" src="http://lorempixel.com/400/200/abstract/3" alt="Card image cap">
+                    <img class="card-img-top" src="https://unsplash.it/400/200/?image=1022" alt="Card image cap">
                     <div class="card-block">
                         <h4 class="card-title">Card vertical</h4>
                         <p class="card-text">
@@ -212,7 +226,7 @@
             <div class="col col-md-4" data-paroller-factor="0.9" data-paroller-type="foreground"
                  data-paroller-direction="vertical">
                 <div class="card">
-                    <img class="card-img-top" src="http://lorempixel.com/400/200/abstract/3" alt="Card image cap">
+                    <img class="card-img-top" src="https://unsplash.it/400/200/?image=1021" alt="Card image cap">
                     <div class="card-block">
                         <h4 class="card-title">Card vertical</h4>
                         <p class="card-text">
@@ -225,7 +239,7 @@
             <div class="col col-md-4" data-paroller-factor="0.15" data-paroller-type="foreground"
                  data-paroller-direction="vertical">
                 <div class="card">
-                    <img class="card-img-top" src="http://lorempixel.com/400/200/abstract/4" alt="Card image cap">
+                    <img class="card-img-top" src="https://unsplash.it/400/200/?image=1020" alt="Card image cap">
                     <div class="card-block">
                         <h4 class="card-title">Card vertical</h4>
                         <p class="card-text">
@@ -238,7 +252,7 @@
             <div class="col col-md-4" data-paroller-factor="-0.1" data-paroller-type="foreground"
                  data-paroller-direction="vertical">
                 <div class="card">
-                    <img class="card-img-top" src="http://lorempixel.com/400/200/abstract/5" alt="Card image cap">
+                    <img class="card-img-top" src="https://unsplash.it/400/200/?image=1019" alt="Card image cap">
                     <div class="card-block">
                         <h4 class="card-title">Card vertical</h4>
                         <p class="card-text">
@@ -253,7 +267,7 @@
             <div class="col col-sm-6" data-paroller-factor="0.1" data-paroller-type="foreground"
                  data-paroller-direction="vertical">
                 <div class="card">
-                    <img class="card-img-top" src="http://lorempixel.com/400/200/abstract/6" alt="Card image cap">
+                    <img class="card-img-top" src="https://unsplash.it/400/200/?image=1018" alt="Card image cap">
                     <div class="card-block">
                         <h4 class="card-title">Card vertical</h4>
                     </div>
@@ -262,7 +276,7 @@
             <div class="col col-sm-6" data-paroller-factor="-0.1" data-paroller-type="foreground"
                  data-paroller-direction="vertical">
                 <div class="card">
-                    <img class="card-img-top" src="http://lorempixel.com/400/200/abstract/7" alt="Card image cap">
+                    <img class="card-img-top" src="https://unsplash.it/400/200/?image=1017" alt="Card image cap">
                     <div class="card-block">
                         <h4 class="card-title">Card vertical</h4>
                     </div>
@@ -273,14 +287,14 @@
 
     <section id="horizontal" class="my-5">
         <div class="jumbotron text-center bg-faded my-5"
-             style="background: url('http://lorempixel.com/1200/600/abstract/8') no-repeat center;"
+             style="background: url('https://unsplash.it/1200/600/?image=981') no-repeat center;"
              data-paroller-factor="0.5"
              data-paroller-direction="horizontal">
             <h1 class="heading-1 py-5 text-white">Hola, horizontal Parallax!</h1>
             <p class="text-white">data-paroller-factor="0.5"</p>
         </div>
         <div class="jumbotron text-center bg-faded my-5"
-             style="background: url('http://lorempixel.com/1200/1200/abstract/5') repeat center;"
+             style="background: url('https://unsplash.it/1200/600/?image=1079') repeat center;"
              data-paroller-factor="-0.75"
              data-paroller-direction="horizontal">
             <h1 class="heading-1 py-5 text-white">Maybe some horizontal scrolling with repeated background?</h1>
@@ -290,7 +304,7 @@
             <div class="col col-md-4" data-paroller-factor="-0.3" data-paroller-type="foreground"
                  data-paroller-direction="horizontal">
                 <div class="card">
-                    <img class="card-img-top" src="http://lorempixel.com/400/200/abstract/1" alt="Card image cap">
+                    <img class="card-img-top" src="https://unsplash.it/400/200/?image=1016" alt="Card image cap">
                     <div class="card-block">
                         <h4 class="card-title">Card horizontal</h4>
                         <p class="card-text">
@@ -304,7 +318,7 @@
             <div class="col col-md-4" data-paroller-factor="-0.1" data-paroller-type="foreground"
                  data-paroller-direction="horizontal">
                 <div class="card">
-                    <img class="card-img-top" src="http://lorempixel.com/400/200/abstract/2" alt="Card image cap">
+                    <img class="card-img-top" src="https://unsplash.it/400/200/?image=1014" alt="Card image cap">
                     <div class="card-block">
                         <h4 class="card-title">Card horizontal</h4>
                         <p class="card-text">
@@ -317,7 +331,7 @@
             <div class="col col-md-4" data-paroller-factor="0.1" data-paroller-type="foreground"
                  data-paroller-direction="horizontal">
                 <div class="card">
-                    <img class="card-img-top" src="http://lorempixel.com/400/200/abstract/3" alt="Card image cap">
+                    <img class="card-img-top" src="https://unsplash.it/400/200/?image=1013" alt="Card image cap">
                     <div class="card-block">
                         <h4 class="card-title">Card horizontal</h4>
                         <p class="card-text">
@@ -333,7 +347,7 @@
             <div class="col-12 col-sm-6" data-paroller-factor="0.27" data-paroller-type="foreground"
                  data-paroller-direction="horizontal">
                 <div class="card">
-                    <img class="card-img-top" src="http://lorempixel.com/400/200/abstract/6" alt="Card image cap">
+                    <img class="card-img-top" src="https://unsplash.it/400/200/?image=1012" alt="Card image cap">
                     <div class="card-block">
                         <h4 class="card-title">Card horizontal</h4>
                     </div>
@@ -342,7 +356,7 @@
             <div class="col-12 col-sm-6" data-paroller-factor="-0.1" data-paroller-type="foreground"
                  data-paroller-direction="horizontal">
                 <div class="card">
-                    <img class="card-img-top" src="http://lorempixel.com/400/200/abstract/7" alt="Card image cap">
+                    <img class="card-img-top" src="https://unsplash.it/400/200/?image=1011" alt="Card image cap">
                     <div class="card-block">
                         <h4 class="card-title">Card horizontal</h4>
                     </div>
@@ -366,9 +380,9 @@
                     </small>
                 </p>
             </div>
-            <a href="https://github.com/tgomilar/paroller.js/" class="col text-right">
-                <i class="fa fa-github fa-3x"></i>
-            </a>
+            <div class="col text-right">
+                <iframe src="https://ghbtns.com/github-btn.html?user=tgomilar&repo=paroller.js&type=star&count=true&size=large" frameborder="0" scrolling="0" width="160px" height="30px"></iframe>
+            </div>
         </div>
     </div>
 </footer>
