@@ -26,7 +26,10 @@ $ npm install paroller.js
 ```sh
 $ bower install paroller.js
 ```
-
+#### Yarn
+```sh
+$ yarn add paroller.js
+```
 #### Run
 ```javascript
 // initialize paroller.js
