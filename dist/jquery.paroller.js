@@ -38,7 +38,7 @@
 		}
 	};
 
- 	$.fn.paroller = function () {
+ 	$.fn.paroller = function (options) {
 		var windowHeight = $(window).height();
 		var documentHeight = $(document).height();
 
