@@ -44,7 +44,7 @@ $("#my-element").paroller({ factor: '0.5', type: 'foreground', direction: 'horiz
 <div id="my-element"></div>
 ```
 
-#####npm and browserify
+**npm and browserify**
 ```sh
 require('paroller.js');
 ```
@@ -58,7 +58,7 @@ You can control scrolling parallax effect by setting data-paroller-* values attr
 
 | data-* | value | default value |
 | ------ | ------ | ------ |
-| data-paroller-factor | sets offset and speed. It can be positive (0.3) or negative (-0.3). Less means slower. | 0 |
+| data-paroller-factor | sets offset and speed, it can be positive (0.3) or negative (-0.3), less means slower,  +- values for direction control| 0 |
 | data-paroller-type | background, foreground | background |
 | data-paroller-direction | vertical, horizontal | vertical |
 
