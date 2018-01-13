@@ -31,7 +31,7 @@ $ bower install paroller.js
 ```sh
 $ yarn add paroller.js
 ```
-#### Use
+### Use
 ```javascript
 // initialize paroller.js 
 $('.my-paroller').paroller();
@@ -44,7 +44,7 @@ $("#my-element").paroller({ factor: '0.5', type: 'foreground', direction: 'horiz
 <div id="my-element"></div>
 ```
 
-#####npm and browserify
+**npm and browserify**
 ```sh
 require('paroller.js');
 ```
