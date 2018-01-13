@@ -31,7 +31,7 @@ $ bower install paroller.js
 ```sh
 $ yarn add paroller.js
 ```
-### Use
+## Use
 ```javascript
 // initialize paroller.js 
 $('.my-paroller').paroller();
