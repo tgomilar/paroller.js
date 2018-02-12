@@ -9,7 +9,7 @@ A lightweight jQuery plugin that enables parallax scrolling effect
   - Mobile ready
   - Easy to use
 
-**DEMO:** [example page](https://tgomilar.github.io/paroller.js/)
+**DEMO:** [Example page](https://tgomilar.github.io/paroller.js/), [Alveus](https://alveus.si/en) 
 
 ## Install
 Before closing ```</body>``` element include:
