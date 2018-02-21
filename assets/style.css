@@ -1,8 +1,6 @@
 html {
     overflow-x: hidden;
-
 }
-
 .logo-arrow {
     position: absolute;
     left: 20px;
@@ -31,7 +29,7 @@ html {
     height: 25px;
     background: #222;
     top: 0;
-    left: 15px;
+    left: 15.5px;
     animation: changePosition 2s linear 2s infinite alternate;
 }
 nav {
@@ -39,7 +37,7 @@ nav {
 }
 #vertical,
 #horizontal {
-    padding: 200px 0;
+    padding: 50px 0;
     scroll-behavior: smooth;
 }
 #vertical .jumbotron {

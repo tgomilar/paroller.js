@@ -1,13 +1,20 @@
 /**
- * jQuery plugin paroller.js v1.0
+ * jQuery plugin paroller.js v1.3.0
  * https://github.com/tgomilar/paroller.js
  * preview: https://tgomilar.github.io/paroller/
  **/
-
-(function ($) {
+(function (factory) {
     'use strict';
 
-    var elem = $('[data-paroller-factor]');
+    if (typeof module === 'object' && typeof module.exports === 'object') {
+        module.exports = factory(require('jquery'));
+    }
+    else {
+        factory(jQuery);
+    }
+})(function ($) {
+    'use strict';
+
     var setDirection = {
         bgVertical: function (elem, bgOffset) {
             return elem.css({'background-position': 'center ' + -bgOffset + 'px'});
@@ -19,14 +26,18 @@
             return elem.css({
                 '-webkit-transform': 'translateY(' + elemOffset + 'px)',
                 '-moz-transform': 'translateY(' + elemOffset + 'px)',
-                'transform': 'translateY(' + elemOffset + 'px)'
+                'transform': 'translateY(' + elemOffset + 'px)',
+                'transition': 'transform linear',
+                'will-change': 'transform'
             });
         },
         horizontal: function (elem, elemOffset) {
             return elem.css({
                 '-webkit-transform': 'translateX(' + elemOffset + 'px)',
                 '-moz-transform': 'translateX(' + elemOffset + 'px)',
-                'transform': 'translateX(' + elemOffset + 'px)'
+                'transform': 'translateX(' + elemOffset + 'px)',
+                'transition': 'transform linear',
+                'will-change': 'transform'
             });
         }
     };
@@ -42,7 +53,7 @@
             direction: 'vertical' // horizontal
         }, options);
 
-        elem.each(function () {
+        return this.each(function () {
             var working = false;
             var $this = $(this);
             var offset = $this.offset().top;
@@ -81,6 +92,8 @@
             $(window).on('scroll', function () {
                 if (!working) {
                     var scrolling = $(this).scrollTop();
+                    documentHeight = $(document).height();
+
                     bgOffset = Math.round((offset - scrolling) * factor);
                     transform = Math.round(((offset - (windowHeight / 2) + height) - scrolling) * factor);
 
@@ -92,7 +105,7 @@
                             setDirection.bgHorizontal($this, bgOffset);
                         }
                     }
-                    else if ((type == 'foreground') && (scrolling < documentHeight)) {
+                    else if ((type == 'foreground') && (scrolling <= documentHeight)) {
                         if (direction == 'vertical') {
                             setDirection.vertical($this, transform);
                         }
@@ -107,4 +120,4 @@
             }).trigger('scroll');
         });
     };
-})(jQuery);
+});
