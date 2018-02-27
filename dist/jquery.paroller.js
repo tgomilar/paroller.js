@@ -22,20 +22,22 @@
         bgHorizontal: function (elem, bgOffset) {
             return elem.css({'background-position': -bgOffset + 'px' + ' center'});
         },
-        vertical: function (elem, elemOffset) {
+        vertical: function (elem, elemOffset, oldTransform) {
+            (oldTransform === 'none' ? oldTransform = '' : true);
             return elem.css({
-                '-webkit-transform': 'translateY(' + elemOffset + 'px)',
-                '-moz-transform': 'translateY(' + elemOffset + 'px)',
-                'transform': 'translateY(' + elemOffset + 'px)',
+                '-webkit-transform': 'translateY(' + elemOffset + 'px)' + oldTransform,
+                '-moz-transform': 'translateY(' + elemOffset + 'px)' + oldTransform,
+                'transform': 'translateY(' + elemOffset + 'px)' + oldTransform,
                 'transition': 'transform linear',
                 'will-change': 'transform'
             });
         },
-        horizontal: function (elem, elemOffset) {
+        horizontal: function (elem, elemOffset, oldTransform) {
+            (oldTransform === 'none' ? oldTransform = '' : true);
             return elem.css({
-                '-webkit-transform': 'translateX(' + elemOffset + 'px)',
-                '-moz-transform': 'translateX(' + elemOffset + 'px)',
-                'transform': 'translateX(' + elemOffset + 'px)',
+                '-webkit-transform': 'translateX(' + elemOffset + 'px)' + oldTransform,
+                '-moz-transform': 'translateX(' + elemOffset + 'px)' + oldTransform,
+                'transform': 'translateX(' + elemOffset + 'px)' + oldTransform,
                 'transition': 'transform linear',
                 'will-change': 'transform'
             });
@@ -68,6 +70,9 @@
             var bgOffset = Math.round(offset * factor);
             var transform = Math.round((offset - (windowHeight / 2) + height) * factor);
 
+            /* Transform directive of element before paroller */
+            var oldTransform = $this.css('transform');
+
             if (type == 'background') {
                 if (direction == 'vertical') {
                     setDirection.bgVertical($this, bgOffset);
@@ -78,10 +83,10 @@
             }
             else if (type == 'foreground') {
                 if (direction == 'vertical') {
-                    setDirection.vertical($this, transform);
+                    setDirection.vertical($this, transform, oldTransform);
                 }
                 else if (direction == 'horizontal') {
-                    setDirection.horizontal($this, transform);
+                    setDirection.horizontal($this, transform, oldTransform);
                 }
             }
 
@@ -107,10 +112,10 @@
                     }
                     else if ((type == 'foreground') && (scrolling <= documentHeight)) {
                         if (direction == 'vertical') {
-                            setDirection.vertical($this, transform);
+                            setDirection.vertical($this, transform, oldTransform);
                         }
                         else if (direction == 'horizontal') {
-                            setDirection.horizontal($this, transform);
+                            setDirection.horizontal($this, transform, oldTransform);
                         }
                     }
 
