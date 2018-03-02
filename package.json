@@ -1,6 +1,6 @@
 {
   "name": "paroller.js",
-  "version": "1.3.0",
+  "version": "1.3.1",
   "description": "Parallax scrolling jQuery plugin",
   "main": "dist/jquery.paroller.js",
   "scripts": {
@@ -9,6 +9,9 @@
   "repository": {
     "type": "git",
     "url": "git+https://github.com/tgomilar/paroller.js.git"
+  },
+  "dependencies": {
+    "jquery": "^3.1.0"
   },
   "keywords": [
     "parallax",
