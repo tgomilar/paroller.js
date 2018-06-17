@@ -5,165 +5,165 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="lightweight jQuery plugin that enables parallax scrolling effect on elements">
     <meta name="keywords"
-          content="paroller.js,jquery plugin,parallax,scrolling,parallax effect,jQuery,paroller,scroller,scrolling, paroller js, paroller jquery">
+          content="paroller.js,jquery plugin,parallax,scrolling,parallax effect,jQuery,paroller,scroller,scrolling,paroller js,paroller jquery, paroller plugin">
     <meta name="google-site-verification" content="TWTDG5sHkQOekIFUa5uWVmi7yO3pJTU7AGMaIPajIHc"/>
     <title>paroller.js</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css"
-          integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
-    <link rel="stylesheet" href="assets/style.css">
     <script src="https://use.fontawesome.com/9576790a31.js"></script>
+    <link rel="stylesheet" href="assets/style.css">
 </head>
+<body class="is-loading">
 
-<body class="my-body" data-spy="scroll" data-target="#main-navbar" data-offset="70">
-<nav class="navbar navbar-light bg-faded sticky-top navbar-toggleable-md" id="main-navbar">
-    <a class="navbar-brand" href="#">
-        <span class="logo-arrow"></span>
-        <span class="pl-5">paroller.js</span>
-        <span class="navbar-text small hidden-xs-down"> - parallax scrolling jQuery plugin</span>
-    </a>
-    <div class="collapse navbar-collapse justify-content-end">
-        <ul class="nav nav-pills align-items-center">
-            <li class="nav-item active">
-                <a class="nav-link" href="#download">Download <span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#usage">Usage</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#vertical">Vertical</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#horizontal">Horizontal</a>
-            </li>
-            <li class="nav-item">
-                <a href="https://github.com/tgomilar/paroller.js/" class="mx-2">
-                    <i class="fa fa-github fa-2x"></i>
-                </a>
-            </li>
-        </ul>
+<!-- GitHub link -->
+<a class="github" href="https://github.com/tgomilar/paroller.js/" target="_blank">
+    <i class="fa fa-github fa-2x" aria-hidden="true"></i>
+</a>
+
+<!-- Sidebar -->
+<section id="sidebar">
+    <div class="inner">
+        <nav>
+            <ul>
+                <li><a href="#download" class="active">Download</a></li>
+                <li><a href="#install">Install</a></li>
+                <li><a href="#usage">Usage</a></li>
+                <li><a href="#demo">Demo</a></li>
+            </ul>
+        </nav>
     </div>
-</nav>
-<div class="container">
-    <section id="download" class="jumbotron text-center bg-faded my-5">
-        <div class="container py-4">
-            <h1 class="jumbotron-heading display-5 mb-3">Download</h1>
-            <p class="lead col-8 mx-auto">paroller.js is a lightweight jQuery plugin that enables parallax scrolling
-                effect on selected elements.</p>
-            <ul class="text-left col-xs-12 col-sm-12 col-md-9 offset-md-2">
+</section>
+
+<!-- Wrapper -->
+<div id="wrapper">
+
+    <!-- Download -->
+    <section id="download" class="wrapper fullscreen fade-up">
+        <div class="inner">
+            <h1 class="title-gradient">paroller.js</h1>
+            <p>paroller.js is a lightweight jQuery plugin that enables parallax scrolling effect on selected
+                elements.</p>
+            <ul>
                 <li>You can use it on elements with background property or on any other element.</li>
                 <li>While scrolling elements can move: vertical, horizontal.</li>
-                <li>Manipulated through <b>html data-*</b> attributes or <b>jQuery options</b>.</li>
+                <li>Manipulated through html <i>data-*</i> attributes or jQuery options.</li>
                 <li>Mobile ready.</li>
                 <li>Easy to use.</li>
             </ul>
-            <p class="mb-4">
-                <a href="https://github.com/tgomilar/paroller.js/" target="_blank" class="btn btn-primary btn-lg my-2">
-                    <i class="fa fa-github" aria-hidden="true"></i> GitHub
-                </a>
-                <a href="https://github.com/tgomilar/paroller.js/archive/master.zip" target="_blank" class="btn btn-primary btn-lg my-2">
-                    <i class="fa fa-download" aria-hidden="true"></i> Download
-                </a>
-            </p>
-            <h3>Previous versions</h3>
-            <a href="https://github.com/tgomilar/paroller.js/releases/tag/v1.2.9" target="_blank" class="btn btn-secondary my-2">
-                <i class="fa fa-download" aria-hidden="true"></i> Download v1.2.9
-            </a>
-            <hr class="my-5">
-            <h1 class="jumbotron-heading display-5 mb-3">Install</h1>
+
+            <ul class="actions">
+                <li>
+                    <a href="https://github.com/tgomilar/paroller.js/" target="_blank"
+                       class="button">
+                        <i class="fa fa-github" aria-hidden="true"></i> GitHub
+                    </a>
+                </li>
+                <li>
+                    <a href="https://github.com/tgomilar/paroller.js/archive/master.zip" target="_blank"
+                       class="button">
+                        <i class="fa fa-download" aria-hidden="true"></i> Download
+                    </a>
+                </li>
+                <li>|</li>
+                <li>
+                    <a href="https://github.com/tgomilar/paroller.js/releases/" target="_blank">
+                        Previous versions
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Install -->
+    <section id="install" class="wrapper fade-up">
+        <div class="inner">
+            <h2 class="major">Install</h2>
             <div class="text-left col-xs-12 col-sm-12 col-md-9 offset-md-2">
-                <p>Before closing <samp><code>&lt;/body&gt;</code></samp> element include:</p>
-                <dl class="row text-left">
-                    <dt class="col-sm-3">1. jQuery library</dt>
-                    <dd class="col-sm-9">
-                        <a href="http://jquery.com/download/" target="_blank"><i class="fa fa-link"></i> jQuery</a>
-                        <code>&lt;script src="jquery-3.1.1.min.js"&gt;&lt;/script&gt;</code>
-                    </dd>
-                    <dt class="col-sm-3">2. jquery.paroller.js</dt>
-                    <dd class="col-sm-9">
-                        <a href="https://github.com/tgomilar/paroller.js/blob/master/dist/" target="_blank"><i
-                                class="fa fa-link"></i> Paroller</a>
-                        <code>&lt;script src="jquery.paroller.min.js"&gt;&lt;/script&gt;</code>
-                    </dd>
-                    <dt class="col-sm-3">3. Use</dt>
-                    <dd class="col-sm-9">
-                        <div class="card mb-3">
-                            <div class="card-block">
-                                <code>
-                                    // initialize paroller.js <br>
-                                    $('.my-paroller').paroller();
-                                </code>
-                            </div>
+                <p>Before closing <samp><code>&lt;/body&gt;</code></samp> element include <a
+                        href="http://jquery.com/download/" target="_blank">jQuery</a> and <a
+                        href="https://github.com/tgomilar/paroller.js/blob/master/dist/" target="_blank">paroller.js</a>.
+                </p>
+
+                <h3>1. jQuery library</h3>
+                <code>&lt;script src="jquery-3.1.1.min.js"&gt;&lt;/script&gt;</code>
+
+                <h3>2. jquery.paroller.js</h3>
+                <code>&lt;script src="jquery.paroller.min.js"&gt;&lt;/script&gt;</code>
+
+                <h3>3. Use</h3>
+                <h5>// define element</h5>
+
+                <table>
+                    <tr>
+                        <td>a)</td>
+                        <td><div class="block">
+                            <code>
+                                &lt;div class="my-paroller" data-paroller-factor="0.3" data-paroller-type="foreground"
+                                data-paroller-direction="horizontal">&lt;/div&gt;
+                            </code>
                         </div>
-                        <div class="card mb-3">
-                            <div class="card-block">
-                                <code>
-                                    // initialize paroller.js and set attributes <br>
-                                    $("#my-element").paroller({ factor: '0.5', type: 'foreground', direction: 'horizontal' });
-                                </code>
-                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>b)</td>
+                        <td><div class="block">
+                            <code> &lt;div id="my-element">&lt;/div&gt;</code>
                         </div>
-                        <div class="card">
-                            <div class="card-block">
-                                <code>
-                                    // define element <br>
-                                    &lt;div class="my-paroller" data-paroller-factor="0.3" data-paroller-type="foreground" data-paroller-direction="horizontal">&lt;/div&gt;
-                                    <br><br>
-                                    &lt;div id="my-element">&lt;/div&gt;
-                                </code>
-                            </div>
-                        </div>
-                    </dd>
-                </dl>
-                <h6>npm</h6>
-                <div class="card my-3">
-                    <div class="card-block">
-                        <code>$ npm install paroller.js</code><br><br>
-                        <h6>npm and browserify</h6>
-                        <code>require('paroller.js');</code>
-                    </div>
-                </div>
-                <h6>Bower</h6>
-                <div class="card my-3">
-                    <div class="card-block">
-                        <code>$ bower install paroller.js</code>
-                    </div>
-                </div>
-                <h6>Yarn</h6>
-                <div class="card my-3">
-                    <div class="card-block">
-                        <code>$ yarn add paroller.js</code>
-                    </div>
-                </div>
+                        </td>
+                    </tr>
+                </table>
+
+                <h5>// initialize paroller.js</h5>
+                <table>
+                    <tr>
+                        <td>a)</td>
+                        <td><code>$('.my-paroller').paroller();</code></td>
+                    </tr>
+                    <tr>
+                        <td>b)</td>
+                        <td><code> $("#my-element").paroller({ factor: 0.5, factorXs: 0.2, type: 'foreground', direction: 'horizontal' });</code></td>
+                    </tr>
+                </table>
+
+                <h3>npm</h3>
+                <code>$ npm install paroller.js</code><br>
+                <code>require('paroller.js');</code>
+
+                <h3>Yarn</h3>
+                <code>$ yarn add paroller.js</code>
+
+                <h3>Bower</h3>
+                <code>$ bower install paroller.js</code>
             </div>
         </div>
     </section>
-    <section id="usage" class="jumbotron bg-faded my-5">
-        <div class="container py-4">
-            <h1 class="jumbotron-heading text-center display-5 mb-3">Usage</h1>
-            <p class="lead text-center mb-5">
-                To use paroller.js parallax scrolling effect you can use <b>data-paroller-*</b>
-                attributes on selected elements or <b>set values via jQuery</b>.
-                'factor' sets speed and distance of element's parallax effect on scroll.
-            </p>
-            <div class="card">
-                <div class="card-block">
-                    <pre>
-                    &lt;div class="paroller"&gt; Awesome element with parallax effect &lt;/div&gt;
+
+    <!-- Usage -->
+    <section id="usage" class="wrapper fade-up">
+        <div class="inner">
+            <h2>Usage</h2>
+            <div class="container">
+                <p>
+                    To enable parallax scrolling effect you can use <b>data-paroller-*</b>
+                    attributes on selected elements or <b>set values via jQuery</b>.<br>
+                    <b>'factor'</b> sets speed and distance of element's parallax effect on scroll.
+                </p>
+                <p class="alert">
+                    <b class="fa fa-exclamation-circle"></b> Since <b>'factor'</b> is multiplier it <b>must be set for paroller.js to have parallax effect</b>.
+                </p>
+                <pre>
+                    &lt;div class="paroller"&gt;Awesome element with parallax effect&lt;/div&gt;
 
                     // initialize paroller.js and set attributes for selected elements
                     $(".paroller, [data-paroller-factor]").paroller({
                         factor: 0.3,            // multiplier for scrolling speed and offset
+                        factorXs: 0.1,           // multiplier for scrolling speed and offset
                         type: 'foreground',     // background, foreground
                         direction: 'horizontal' // vertical, horizontal
                     });
                     </pre>
-                </div>
-            </div>
-            <hr>
-            <div class="card">
-                <div class="card-block">
-                    <pre>
+
+                <pre>
                     &lt;div data-paroller-factor="-0.1"
+                        data-paroller-factor-xs="0.1"
                         data-paroller-type="foreground"
                         data-paroller-direction="vertical"&gt;
                         Awesome element with parallax effect
@@ -171,287 +171,368 @@
 
                     // initialize paroller.js
                     $("[data-paroller-factor]").paroller();
-                    </pre>
+                </pre>
+                <hr>
+
+                <h3>Via data attributes</h3>
+                <table>
+                    <tr>
+                        <td>data-paroller-factor</td>
+                        <td>Sets elements offset and speed. It can be positive (0.3)
+                            or negative (-0.3).
+                            Less means slower. <br>
+                            <code>&lt;div data-paroller-factor="0.3"&gt;&lt;/div&gt;</code>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>data-paroller-type</td>
+                        <td> This attribute has two values <i>background</i> and <i>foreground</i>.<br>
+                            If not set the default value is <i>background</i>. <br>
+                            <code>&lt;div data-paroller-factor="0.3"
+                                data-paroller-type="foreground"&gt;&lt;/div&gt;</code>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>data-paroller-direction</td>
+                        <td>This attribute hsd two values: <i>vertical</i>, <i>horizontal</i>.<br>
+                            If not used the default value is set to: <i>vertical</i>. <br>
+                            <code>&lt;div data-paroller-factor="0.3" data-paroller-direction="horizontal"&gt;&lt;/div&gt;</code>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+
+            <hr>
+            <h3>Via JavaScript</h3>
+
+            <pre>
+            // initialize paroller.js and set attributes for selected elements
+
+            $(".paroller, [data-paroller-factor]").paroller({
+                factor: 0.3,            // multiplier for scrolling speed and offset
+                factorXs: 0.1,          // multiplier for scrolling speed and offset if window width is <576px
+                factorSm: 0.2,          // multiplier for scrolling speed and offset if window width is <=768px
+                factorMd: 0.2,          // multiplier for scrolling speed and offset if window width is <=1024px
+                factorLg: 0.3,          // multiplier for scrolling speed and offset if window width is <=1200px
+                type: 'foreground',     // background, foreground
+                direction: 'horizontal' // vertical, horizontal
+            });
+            </pre>
+        </div>
+    </section>
+
+    <!-- Demo -->
+    <section id="demo" class="wrapper fade-up">
+        <div class="inner">
+            <h2>Demo</h2>
+
+            <h6 class="mega my-element"
+                data-paroller-factor="0.5"
+                data-paroller-factor-lg="0.4"
+                data-paroller-factor-md="0.3"
+                data-paroller-factor-sm="-0.2"
+                data-paroller-factor-xs="-0.1"
+                data-paroller-type="foreground"
+                data-paroller-direction="horizontal"
+            >
+                👋 Heola! こんにちは! Ahoj! Cześć! Olá!
+            </h6>
+            <div class="show-more"><i class="fa fa-code"></i></div>
+            <div class="popover">
+                <div class="popover-inner">
+                    <div>
+                        <h5>html</h5>
+                        class="mega my-element"<br>
+                        data-paroller-factor="0.5"<br>
+                        data-paroller-factor-lg="0.4"<br>
+                        data-paroller-factor-md="0.3"<br>
+                        data-paroller-factor-sm="-0.2"<br>
+                        data-paroller-factor-xs="-0.1"<br>
+                        data-paroller-type="foreground"<br>
+                        data-paroller-direction="horizontal"
+                    </div>
+                    <div>
+                        <h5>js</h5>
+                        $('.my-element').paroller();
+                    </div>
                 </div>
             </div>
-            <hr class="my-5">
-            <h2 class="text-center">Via data attributes</h2>
-            <div class="my-5">
-                <dl class="row text-left">
-                    <dt class="col-sm-3"><samp>data-paroller-factor</samp></dt>
-                    <dd class="col-sm-9">
-                        This attribute sets elements offset and speed. It can be positive (<i><samp>0.3</samp></i>) or negative (<i><samp>-0.3</samp></i>).
-                        Less means slower. <br>
-                        <code>&lt;div data-paroller-factor="0.3"&gt;&lt;/div&gt;</code>
-                    </dd>
 
-                    <dt class="col-sm-3"><samp>data-paroller-type</samp></dt>
-                    <dd class="col-sm-9">
-                        This attribute has two values <i><samp>background</samp></i> and <i><samp>foreground</samp></i>.<br>
-                        If not used the default value is set to: <i><samp>background</samp></i>. <br>
-                        <code>&lt;div data-paroller-factor="0.3" data-paroller-type="foreground"&gt;&lt;/div&gt;</code>
-                    </dd>
-
-                    <dt class="col-sm-3"><samp>data-paroller-direction</samp></dt>
-                    <dd class="col-sm-9">
-                        This attribute hsd two values: <i><samp>vertical</samp></i>, <i><samp>horizontal</samp></i>.<br>
-                        If not used the default value is set to: <i><samp>vertical</samp></i>. <br>
-                        <code>&lt;div data-paroller-factor="0.3" data-paroller-direction="horizontal"&gt;&lt;/div&gt;</code>
-                    </dd>
-                </dl>
-            </div>
-            <hr class="my-5">
-            <h2 class="text-center">Via JavaScript</h2>
-            <div class="card my-5">
-                <div class="card-block text-left">
-                       <pre>
-                        // initialize paroller.js and set attributes for selected elements
-
-                        $(".paroller, [data-paroller-factor]").paroller({
-                            factor: 0.3,            // multiplier for scrolling speed and offset
-                            type: 'foreground',     // background, foreground
-                            direction: 'horizontal' // vertical, horizontal
+            <h6 class="mega align-right paroller-example">
+                გამარჯობა! Hello! Zdravo! Ciao! Привет! 你好! Ciao! !مرحبا Hallå! Χαίρετε! ¡Hola! 👋
+            </h6>
+            <div class="show-more"><i class="fa fa-code"></i></div>
+            <div class="popover">
+                <div class="popover-inner">
+                    <div>
+                        <h5>html</h5>
+                        class="paroller-example"
+                    </div>
+                    <div>
+                        <h5>js</h5>
+                        $('.paroller-example').paroller({<br>
+                        factorXs: 0.1,<br>
+                        factorSm: 0.1,<br>
+                        factorMd: -0.4,<br>
+                        factorLg: -0.5,<br>
+                        factorXl: -0.6,<br>
+                        factor: -0.4,<br>
+                        type: 'foreground',<br>
+                        direction: 'horizontal'<br>
                         });
-                        </pre>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section id="vertical" class="my-5">
-        <div class="jumbotron text-center bg-faded my-5"
-             style="background: url('https://unsplash.it/1200/600?image=1015') no-repeat center;"
-             data-paroller-factor="0.5">
-            <h1 class="heading-1 py-5 text-white">Hello Parallax!</h1>
-            <p class="text-white">data-paroller-factor="0.5"</p>
-        </div>
-        <div class="jumbotron text-center bg-faded my-5"
-             style="background: url('https://unsplash.it/1200/800?image=974') no-repeat center;"
-             data-paroller-factor="-0.15">
-            <h1 class="heading-1 py-5 text-white">Scrolling is fun!</h1>
-            <p class="text-white">data-paroller-factor="-0.15"</p>
-        </div>
-        <div class="row my-5">
-            <div class="col col-md-4 paroller">
-                <div class="card">
-                    <img class="card-img-top" src="https://unsplash.it/400/200/?image=1024" alt="Card image cap">
-                    <div class="card-block">
-                        <h4 class="card-title">Card vertical</h4>
-                        <p class="card-text">
-                            <code>$('.paroller').paroller({
-                                factor: 0.4,
-                                type: 'foreground'
-                                });</code>
-                        </p>
                     </div>
                 </div>
             </div>
-            <div class="col col-md-4" data-paroller-factor="0.1" data-paroller-type="foreground">
-                <div class="card">
-                    <img class="card-img-top" src="https://unsplash.it/400/200/?image=1023" alt="Card image cap">
-                    <div class="card-block">
-                        <h4 class="card-title">Card vertical</h4>
-                        <p class="card-text">
-                            <code>data-paroller-factor="0.1" data-paroller-type="foreground"</code>
-                        </p>
+
+            <div class="jumbotron"
+                 style="background: url('https://unsplash.it/1920/800?image=950') no-repeat center; background-size: cover;"
+                 data-paroller-factor="0.5"
+                 data-paroller-factor-xs="0.2"
+            >
+            </div>
+            <div class="show-more"><i class="fa fa-code"></i></div>
+            <div class="popover">
+                <div class="popover-inner">
+                    <div>
+                        <h5>html</h5>
+                        class="jumbotron"
+                        style="background: url('https://unsplash.it/1920/800?image=950') no-repeat center;<br>
+                        background-size: cover;"<br>
+                        data-paroller-factor="0.5"<br>
+                        data-paroller-factor-xs="0.2"
+                    </div>
+                    <div>
+                        <h5>js</h5>
+                        $('.jumbotron').paroller();
                     </div>
                 </div>
             </div>
-            <div class="col col-md-4" data-paroller-factor="-0.4" data-paroller-type="foreground">
-                <div class="card">
-                    <img class="card-img-top" src="https://unsplash.it/400/200/?image=1022" alt="Card image cap">
-                    <div class="card-block">
-                        <h4 class="card-title">Card vertical</h4>
-                        <p class="card-text">
-                            <code>data-paroller-factor="-0.4" data-paroller-type="foreground"</code>
-                        </p>
+
+            <div class="jumbotron text-center my-5"
+                 style="background: url('https://unsplash.it/1920/800?image=152') repeat center; background-size: cover;"
+                 data-paroller-factor="-0.5"
+                 data-paroller-factor-sm="-0.2"
+                 data-paroller-factor-xs="-0.1"
+            >
+            </div>
+            <div class="show-more"><i class="fa fa-code"></i></div>
+            <div class="popover">
+                <div class="popover-inner">
+                    <div>
+                        <h5>html</h5>
+                        class="jumbotron"
+                        style="background: url('https://unsplash.it/1920/800?image=152') repeat center; background-size:
+                        cover;"<br>
+                        data-paroller-factor="-0.5"<br>
+                        data-paroller-factor-sm="-0.2"<br>
+                        data-paroller-factor-xs="-0.1"
+                    </div>
+                    <div>
+                        <h5>js</h5>
+                        $('.jumbotron').paroller();
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="row my-5">
-            <div class="col col-md-4" data-paroller-factor="0.9" data-paroller-type="foreground"
-                 data-paroller-direction="vertical">
-                <div class="card">
-                    <img class="card-img-top" src="https://unsplash.it/400/200/?image=1021" alt="Card image cap">
-                    <div class="card-block">
-                        <h4 class="card-title">Card vertical</h4>
-                        <p class="card-text">
-                            <code>data-paroller-factor="0.9" data-paroller-type="foreground"
-                                data-paroller-direction="vertical"</code>
-                        </p>
+
+            <div class="jumbotron text-center my-5"
+                 style="background: url('https://unsplash.it/1920/500?image=974') no-repeat center; background-size: cover;"
+                 data-paroller-factor="-0.2">
+            </div>
+            <div class="show-more"><i class="fa fa-code"></i></div>
+            <div class="popover">
+                <div class="popover-inner">
+                    <div>
+                        <h5>html</h5>
+                        class="jumbotron"
+                        style="background: url('https://unsplash.it/1920/500?image=974') no-repeat center;
+                        background-size: cover;"<br>
+                        data-paroller-factor="-0.2"
+                    </div>
+                    <div>
+                        <h5>js</h5>
+                        $('.jumbotron').paroller();
                     </div>
                 </div>
             </div>
-            <div class="col col-md-4" data-paroller-factor="0.15" data-paroller-type="foreground"
-                 data-paroller-direction="vertical">
-                <div class="card">
-                    <img class="card-img-top" src="https://unsplash.it/400/200/?image=1020" alt="Card image cap">
-                    <div class="card-block">
-                        <h4 class="card-title">Card vertical</h4>
-                        <p class="card-text">
-                            <code>data-paroller-factor="0.15" data-paroller-type="foreground"
-                                data-paroller-direction="vertical"</code>
-                        </p>
+
+            <div class="d-flex">
+                <div class="image"
+                     style="background: url('https://unsplash.it/400/800?image=889') no-repeat center; background-size: cover;"
+                     data-paroller-factor="0.5"
+                     data-paroller-factor-md="0.3"
+                     data-paroller-factor-sm="0.2"
+                     data-paroller-factor-xs="0.1"
+                >
+                </div>
+
+                <div class="image"
+                     style="background: url('https://unsplash.it/400/800?image=889') repeat center; background-size: cover;"
+                     data-paroller-factor="-0.4">
+                </div>
+
+                <div class="image"
+                     style="background: url('https://unsplash.it/400/800?image=889') no-repeat center; background-size: cover;"
+                     data-paroller-factor="-0.1">
+                </div>
+            </div>
+            <div class="show-more"><i class="fa fa-code"></i></div>
+            <div class="popover">
+                <div class="popover-inner">
+                    <div>
+                        <h5>html</h5>
+                        class="image"
+                        style="background: url('https://unsplash.it/400/800?image=889') repeat center; background-size:
+                        cover;"<br>
+                        data-paroller-factor="0.5"<br>
+                        data-paroller-factor-md="0.3"<br>
+                        data-paroller-factor-sm="0.2"<br>
+                        data-paroller-factor-xs="0.1"
+                        <hr>
+                        class="image"
+                        style="background: url('https://unsplash.it/400/800?image=889') repeat center; background-size:
+                        cover;"<br>
+                        data-paroller-factor="-0.4"
+                        <hr>
+                        class="image"
+                        style="background: url('https://unsplash.it/400/800?image=889') repeat center; background-size:
+                        cover;"<br>
+                        data-paroller-factor="-0.1"
+                    </div>
+                    <div>
+                        <h5>js</h5>
+                        $('.image').paroller();
+                        <hr>
+                        $('.image').paroller();
+                        <hr>
+                        $('.image').paroller();
                     </div>
                 </div>
             </div>
-            <div class="col col-md-4" data-paroller-factor="-0.1" data-paroller-type="foreground"
-                 data-paroller-direction="vertical">
-                <div class="card">
-                    <img class="card-img-top" src="https://unsplash.it/400/200/?image=1019" alt="Card image cap">
-                    <div class="card-block">
-                        <h4 class="card-title">Card vertical</h4>
-                        <p class="card-text">
-                            <code>data-paroller-factor="-0.1" data-paroller-type="foreground"
-                                data-paroller-direction="vertical"</code>
-                        </p>
+
+            <div class="jumbotron text-center my-5"
+                 style="background: url('https://unsplash.it/1920/500?image=867') no-repeat center; background-size: cover;"
+                 data-paroller-factor="-0.15" data-paroller-direction="horizontal">
+            </div>
+            <div class="show-more"><i class="fa fa-code"></i></div>
+            <div class="popover">
+                <div class="popover-inner">
+                    <div>
+                        <h5>html</h5>
+                        class="jumbotron"
+                        style="background: url('https://unsplash.it/1920/500?image=867') no-repeat center;
+                        background-size: cover;"<br>
+                        data-paroller-factor="-0.15"<br>
+                        data-paroller-direction="horizontal"
+                    </div>
+                    <div>
+                        <h5>js</h5>
+                        $('.jumbotron').paroller();
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="row my-5">
-            <div class="col col-sm-6" data-paroller-factor="0.1" data-paroller-type="foreground"
-                 data-paroller-direction="vertical">
-                <div class="card">
-                    <img class="card-img-top" src="https://unsplash.it/400/200/?image=1018" alt="Card image cap">
-                    <div class="card-block">
-                        <h4 class="card-title">Card vertical</h4>
+
+            <div class="jumbotron text-center my-5"
+                 style="background: url('https://unsplash.it/1920/1200?image=249') repeat bottom; background-size: cover;"
+                 data-paroller-factor="0.3" data-paroller-direction="horizontal">
+            </div>
+            <div class="show-more"><i class="fa fa-code"></i></div>
+            <div class="popover">
+                <div class="popover-inner">
+                    <div>
+                        <h5>html</h5>
+                        class="jumbotron"
+                        style="background: url('https://unsplash.it/1920/1200?image=249') repeat bottom;
+                        background-size: cover;"<br>
+                        data-paroller-factor="0.3"<br>
+                        data-paroller-direction="horizontal"
+                    </div>
+                    <div>
+                        <h5>js</h5>
+                        $('.jumbotron').paroller();
                     </div>
                 </div>
             </div>
-            <div class="col col-sm-6" data-paroller-factor="-0.1" data-paroller-type="foreground"
-                 data-paroller-direction="vertical">
-                <div class="card">
-                    <img class="card-img-top" src="https://unsplash.it/400/200/?image=1033" alt="Card image cap">
-                    <div class="card-block">
-                        <h4 class="card-title">Card vertical</h4>
+
+            <div class="jumbotron text-center my-5"
+                 style="background: url('https://unsplash.it/1920/900?image=888') no-repeat center; background-size: cover;"
+                 data-paroller-factor="-0.5" data-paroller-direction="horizontal">
+            </div>
+            <div class="show-more"><i class="fa fa-code"></i></div>
+            <div class="popover">
+                <div class="popover-inner">
+                    <div>
+                        <h5>html</h5>
+                        class="jumbotron"
+                        style="background: url('https://unsplash.it/1920/900?image=888') no-repeat center;
+                        background-size: cover;"<br>
+                        data-paroller-factor="-0.5"<br>
+                        data-paroller-direction="horizontal"
+                    </div>
+                    <div>
+                        <h5>js</h5>
+                        $('.jumbotron').paroller();
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
-    <section id="horizontal" class="my-5">
-        <div class="jumbotron text-center bg-faded my-5"
-             style="background: url('https://unsplash.it/1200/600/?image=981') center;"
-             data-paroller-factor="0.5"
-             data-paroller-direction="horizontal">
-            <h1 class="heading-1 py-5 text-white">Hola, horizontal Parallax!</h1>
-            <p class="text-white">data-paroller-factor="0.5"</p>
-        </div>
-        <div class="jumbotron text-center bg-faded my-5"
-             style="background: url('https://unsplash.it/1200/600/?image=1079') repeat center;"
-             data-paroller-factor="-0.75"
-             data-paroller-direction="horizontal">
-            <h1 class="heading-1 py-5 text-white">Maybe some horizontal scrolling with repeated background?</h1>
-            <p class="text-white">data-paroller-factor="-0.75"</p>
-        </div>
-        <div class="row my-5">
-            <div class="col col-md-4" data-paroller-factor="-0.3" data-paroller-type="foreground"
-                 data-paroller-direction="horizontal">
-                <div class="card">
-                    <img class="card-img-top" src="https://unsplash.it/400/200/?image=1016" alt="Card image cap">
-                    <div class="card-block">
-                        <h4 class="card-title">Card horizontal</h4>
-                        <p class="card-text">
-                            <code>data-paroller-factor="-0.3" data-paroller-type="foreground"
-                                data-paroller-direction="horizontal"
-                            </code>
-                        </p>
+
+            <h6 class="mega align-center" data-paroller-factor="0.1" data-paroller-type="foreground">
+                Scrolling is fun ✌️
+            </h6>
+            <div class="show-more"><i class="fa fa-code"></i></div>
+            <div class="popover">
+                <div class="popover-inner">
+                    <div>
+                        <h5>html</h5>
+                        class="mega align-center" data-paroller-factor="0.1" data-paroller-type="foreground"
                     </div>
-                </div>
-            </div>
-            <div class="col col-md-4" data-paroller-factor="-0.1" data-paroller-type="foreground"
-                 data-paroller-direction="horizontal">
-                <div class="card">
-                    <img class="card-img-top" src="https://unsplash.it/400/200/?image=1014" alt="Card image cap">
-                    <div class="card-block">
-                        <h4 class="card-title">Card horizontal</h4>
-                        <p class="card-text">
-                            <code>data-paroller-factor="-0.1" data-paroller-type="foreground"
-                                data-paroller-direction="horizontal"</code>
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="col col-md-4" data-paroller-factor="0.1" data-paroller-type="foreground"
-                 data-paroller-direction="horizontal">
-                <div class="card">
-                    <img class="card-img-top" src="https://unsplash.it/400/200/?image=1013" alt="Card image cap">
-                    <div class="card-block">
-                        <h4 class="card-title">Card horizontal</h4>
-                        <p class="card-text">
-                            <code>data-paroller-factor="0.1" data-paroller-type="foreground"
-                                data-paroller-direction="horizontal"</code>
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="row my-5">
-            <div class="col-12 col-sm-6" data-paroller-factor="0.27" data-paroller-type="foreground"
-                 data-paroller-direction="horizontal">
-                <div class="card">
-                    <img class="card-img-top" src="https://unsplash.it/400/200/?image=1012" alt="Card image cap">
-                    <div class="card-block">
-                        <h4 class="card-title">Card horizontal</h4>
-                    </div>
-                </div>
-            </div>
-            <div class="col-12 col-sm-6" data-paroller-factor="-0.1" data-paroller-type="foreground"
-                 data-paroller-direction="horizontal">
-                <div class="card">
-                    <img class="card-img-top" src="https://unsplash.it/400/200/?image=1011" alt="Card image cap">
-                    <div class="card-block">
-                        <h4 class="card-title">Card horizontal</h4>
+                    <div>
+                        <h5>js</h5>
+                        $('.mega').paroller();
                     </div>
                 </div>
             </div>
         </div>
     </section>
 </div>
-<div class="clearfix"></div>
-<footer class="bg-faded text-muted py-5 mt-5">
-    <div class="container">
-        <div class="row">
-            <div class="col-8">
-                <p><b>Happy scrolling!</b></p>
-                <p>
-                    <small>
-                        <script>document.write(new Date().getFullYear())</script>
-                        @ Copyrights <a href="https://github.com/tgomilar/paroller.js/blob/master/LICENCE.md"
-                                        target="_blank">MIT</a>
-                    </small>
-                </p>
-            </div>
-            <div class="col text-right">
-                <iframe src="https://ghbtns.com/github-btn.html?user=tgomilar&repo=paroller.js&type=star&count=true&size=large"
-                        frameborder="0" scrolling="0" width="160px" height="30px"></iframe>
-            </div>
+
+<!-- Footer -->
+<footer id="footer" class="wrapper style1-alt">
+    <div class="inner">
+        <p>Happy scrolling!</p>
+        <div class="signature">
+            <script>document.write(new Date().getFullYear())</script>
+            @ Copyrights <a href="https://github.com/tgomilar/paroller.js/blob/master/LICENCE.md"
+                            target="_blank">MIT</a> | Made with <i class="fa fa-heart"></i> by <a
+                href="https://github.com/tgomilar" target="_blank">@tgomilar</a>
         </div>
     </div>
 </footer>
-<!-- jQuery -->
-<script src="https://code.jquery.com/jquery-3.2.1.min.js"
-        crossorigin="anonymous"></script>
-<!-- Bootstrap 4-->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"
-        integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb"
-        crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"
-        integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn"
-        crossorigin="anonymous"></script>
-<!--Paroller-->
-<script src="dist/jquery.paroller.js"></script>
 
+<!-- Scripts -->
+<script async defer src="https://buttons.github.io/buttons.js"></script>
+<!-- jQuery -->
+<script src="https://code.jquery.com/jquery-3.2.1.min.js" crossorigin="anonymous"></script>
+<!--paroller.js-->
+<script src="dist/jquery.paroller.js"></script>
+<script src="assets/main.js"></script>
 <script>
-    $(function () {
-        $('[data-paroller-factor]').paroller();
-        $('.paroller').paroller({
-            factor: 0.4,
-            type: 'foreground'
+    $(document)
+        .ready(function () {
+            //initialize paroller.js
+            $('[data-paroller-factor]').paroller();
+            //initialize paroller.js and set options for elements with .paroller class
+            $('.paroller-example').paroller({
+                factorXs: 0.1,
+                factorSm: 0.1,
+                factorMd: -0.4,
+                factorLg: -0.5,
+                factorXl: -0.6,
+                factor: -0.4,
+                type: 'foreground',
+                direction: 'horizontal'
+            });
         });
-        $('body').scrollspy({target: '#main-navbar'});
-    });
 </script>
+
 </body>
 </html>
