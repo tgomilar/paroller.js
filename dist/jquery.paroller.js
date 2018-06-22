@@ -1,5 +1,5 @@
 /**
- * jQuery plugin paroller.js v1.4.0
+ * jQuery plugin paroller.js v1.4.1
  * https://github.com/tgomilar/paroller.js
  * preview: https://tgomilar.github.io/paroller/
  **/
@@ -151,13 +151,6 @@
                 offset = $this.offset().top;
                 height = $this.outerHeight();
                 factor = setMovement.factor($this, width, options);
-
-                if (type === 'background') {
-                    clearPositions.background($this);
-                }
-                else if ((type === 'foreground') && (scrolling <= documentHeight)) {
-                    clearPositions.foreground($this);
-                }
 
                 bgOffset = Math.round(offset * factor);
                 transform = Math.round((offset - (windowHeight / 2) + height) * factor);
