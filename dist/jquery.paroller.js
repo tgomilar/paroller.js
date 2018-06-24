@@ -15,6 +15,11 @@
 })(function ($) {
     'use strict';
 
+    var working = false;
+    var scrollAction = function() {
+        working = false;
+    };
+
     var setDirection = {
         bgVertical: function (elem, bgOffset) {
             return elem.css({'background-position': 'center ' + -bgOffset + 'px'});
@@ -48,7 +53,6 @@
         factor: function (elem, width, options) {
             var dataFactor = elem.data('paroller-factor');
             var factor = (dataFactor) ? dataFactor : options.factor;
-
             if (width < 576) {
                 var dataFactorXs = elem.data('paroller-factor-xs');
                 var factorXs = (dataFactorXs) ? dataFactorXs : options.factorXs;
@@ -155,6 +159,11 @@
                 bgOffset = Math.round(offset * factor);
                 transform = Math.round((offset - (windowHeight / 2) + height) * factor);
 
+                if (! working) {
+                    window.requestAnimationFrame(scrollAction);
+                    working = true;
+                }
+
                 if (type === 'background') {
                     clearPositions.background($this);
                     if (direction === 'vertical') {
@@ -182,6 +191,11 @@
                 bgOffset = Math.round((offset - scrolling) * factor);
                 transform = Math.round(((offset - (windowHeight / 2) + height) - scrolling) * factor);
 
+                if (! working) {
+                    window.requestAnimationFrame(scrollAction);
+                    working = true;
+                }
+
                 if (type === 'background') {
                     if (direction === 'vertical') {
                         setDirection.bgVertical($this, bgOffset);
@@ -198,7 +212,7 @@
                         setDirection.horizontal($this, transform, oldTransform);
                     }
                 }
-            })
+            });
         });
     };
 });
