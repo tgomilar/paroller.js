@@ -1,5 +1,5 @@
 /**
- * jQuery plugin paroller.js v1.4.2
+ * jQuery plugin paroller.js v1.4.3
  * https://github.com/tgomilar/paroller.js
  * preview: https://tgomilar.github.io/paroller/
  **/
@@ -7,7 +7,8 @@
     'use strict';
 
     if (typeof module === 'object' && typeof module.exports === 'object') {
-        module.exports = factory(require('jquery'));
+        var jquery = global.jQuery || require('jquery');
+        module.exports = factory(jquery);
     }
     else {
         factory(jQuery);

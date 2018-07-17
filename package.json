@@ -1,10 +1,11 @@
 {
   "name": "paroller.js",
-  "version": "1.4.2",
+  "version": "1.4.3",
   "description": "Parallax scrolling jQuery plugin",
   "main": "dist/jquery.paroller.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "uglifyjs --compress --mangle --output dist/jquery.paroller.min.js -- dist/jquery.paroller.js"
   },
   "repository": {
     "type": "git",
@@ -12,6 +13,9 @@
   },
   "dependencies": {
     "jquery": "^3.1.0"
+  },
+  "devDependencies": {
+    "uglify-js": "^3.4.5"
   },
   "keywords": [
     "parallax",
