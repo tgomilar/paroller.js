@@ -116,13 +116,6 @@ $(".paroller, [data-paroller-factor]").paroller({
 });  
   ```  
   
-## :star: Show your work :star:  
-Interesting showcase or project?   
-  
-[Share it here](https://github.com/tgomilar/paroller.js/issues/32) and let others see your creative work.   
-  
-:clap::clap::clap:  
-  
 License  
 ----  
   
