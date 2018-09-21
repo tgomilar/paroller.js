@@ -1,6 +1,6 @@
 {
   "name": "paroller.js",
-  "version": "1.4.3",
+  "version": "1.4.4",
   "description": "Parallax scrolling jQuery plugin",
   "main": "dist/jquery.paroller.js",
   "scripts": {
