@@ -5,8 +5,9 @@
  **/
 (function (factory) {
     'use strict';
-
-    if (typeof module === 'object' && typeof module.exports === 'object') {
+    if (typeof define === 'function' && define.amd) {
+        define('parollerjs', ['jquery'], factory);
+    } else if (typeof module === 'object' && typeof module.exports === 'object') {
         module.exports = factory(require('jquery'));
     }
     else {
