@@ -158,6 +158,7 @@
                         factorXs: 0.1,           // multiplier for scrolling speed and offset
                         type: 'foreground',     // background, foreground
                         direction: 'horizontal' // vertical, horizontal
+                        transition: 'transform 0.2s ease-in' // CSS transition
                     });
                     </pre>
 
@@ -178,7 +179,7 @@
                 <table>
                     <tr>
                         <td>data-paroller-factor</td>
-                        <td>Sets elements offset and speed. It can be positive (0.3)
+                        <td>Sets offset and speed. It can be positive (0.3)
                             or negative (-0.3).
                             Less means slower. <br>
                             <code>&lt;div data-paroller-factor="0.3"&gt;&lt;/div&gt;</code>
@@ -186,7 +187,7 @@
                     </tr>
                     <tr>
                         <td>data-paroller-type</td>
-                        <td> This attribute has two values <i>background</i> and <i>foreground</i>.<br>
+                        <td>This attribute has two values <i>background</i> and <i>foreground</i>.<br>
                             If not set the default value is <i>background</i>. <br>
                             <code>&lt;div data-paroller-factor="0.3"
                                 data-paroller-type="foreground"&gt;&lt;/div&gt;</code>
@@ -197,6 +198,13 @@
                         <td>This attribute hsd two values: <i>vertical</i>, <i>horizontal</i>.<br>
                             If not used the default value is set to: <i>vertical</i>. <br>
                             <code>&lt;div data-paroller-factor="0.3" data-paroller-direction="horizontal"&gt;&lt;/div&gt;</code>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>data-paroller-transition</td>
+                        <td>Sets CSS transition on elements with paroller <b>type</b> set to <b>foreground</b>.<br>
+                            If not used the default value is set to: <i>translate 0.1s ease</i>. <br>
+                            <code>&lt;div  data-paroller-type="foreground" data-paroller-transition="all 0.2s ease-in"&gt;&lt;/div&gt;</code>
                         </td>
                     </tr>
                 </table>
@@ -216,6 +224,7 @@
                 factorLg: 0.3,          // multiplier for scrolling speed and offset if window width is <=1200px
                 type: 'foreground',     // background, foreground
                 direction: 'horizontal' // vertical, horizontal
+                transition: 'translate 0.1s ease' // CSS transition, added on elements where type:'foreground'
             });
             </pre>
         </div>
@@ -234,6 +243,7 @@
                 data-paroller-factor-xs="-0.1"
                 data-paroller-type="foreground"
                 data-paroller-direction="horizontal"
+                data-paroller-transition="transform .2s linear"
             >
                 👋 Heola! こんにちは! Ahoj! Cześć! Olá!
             </h6>
@@ -249,7 +259,8 @@
                         data-paroller-factor-sm="-0.2"<br>
                         data-paroller-factor-xs="-0.1"<br>
                         data-paroller-type="foreground"<br>
-                        data-paroller-direction="horizontal"
+                        data-paroller-direction="horizontal"<br>
+                        data-paroller-transition="transform .2s linear"
                     </div>
                     <div>
                         <h5>js</h5>
@@ -475,7 +486,11 @@
                 </div>
             </div>
 
-            <h6 class="mega align-center" data-paroller-factor="0.1" data-paroller-type="foreground">
+            <h6 class="mega align-center" data-paroller-factor="0.1"
+                data-paroller-factor-xs="0.05"
+                data-paroller-factor-sm="-0.05"
+                data-paroller-factor-md="0.05"
+                data-paroller-type="foreground">
                 Scrolling is fun ✌️
             </h6>
             <div class="show-more"><i class="fa fa-code"></i></div>

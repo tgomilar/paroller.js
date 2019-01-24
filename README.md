@@ -7,7 +7,7 @@ A lightweight jQuery plugin that enables parallax scrolling effect
  - Mobile ready  
  - Easy to use  
   
-**DEMO:** [Example page](https://tgomilar.github.io/paroller.js/)
+**DEMO:** [Demo](https://tgomilar.github.io/paroller.js/), [Example page](https://alveus.si/en), [Example page](https://whitetailgin.com/)
 
 ## Install  
 Before closing ```</body>``` element include:  
@@ -73,6 +73,7 @@ You can control parallax effect by data-paroller-* or jQuery values.
 | data-paroller-factor-lg | factorLg | number (+/-)  | 0 |  
 | data-paroller-type | type | background, foreground | background |  
 | data-paroller-direction | direction | vertical, horizontal | vertical |  
+| data-paroller-transition | transition | CSS transition | translate 0.1s ease |  
   
 ### data-paroller-factor  
 Sets speed and distance of element's parallax effect on scroll. Value can be positive (0.3) or negative (-0.3). Less means slower. Different sign (+/-) means different direction (up/down, left/right).  
@@ -89,6 +90,9 @@ Sets paroller factor for selected breakpoint.
 | Medium | data-paroller-factor-md | factorMd | <=1024px|  
 | Large | data-paroller-factor-lg | factorLg| <=1200px|  
 | Extra Large | data-paroller-factor-xl | factorxl| <=1920px|  
+
+### data-paroller-transition 
+Only effects elements with paroller.js type set to foreground! 
   
 ### JavaScript  
 ```javascript  
@@ -110,9 +114,10 @@ $(".paroller, [data-paroller-factor]").paroller({
 	 factorSm: 0.2,          // factorXs, factorSm, factorMd, factorLg, factorXl      
 	 factorMd: 0.3,          // factorXs, factorSm, factorMd, factorLg, factorXl      
 	 factorLg: 0.4,          // factorXs, factorSm, factorMd, factorLg, factorXl
-	 factorXl: 0.5  	 // factorXs, factorSm, factorMd, factorLg, factorXl
+	 factorXl: 0.5  	     // factorXs, factorSm, factorMd, factorLg, factorXl
 	 type: 'foreground',     // background, foreground  
-	 direction: 'horizontal' // vertical, horizontal  
+	 direction: 'horizontal',// vertical, horizontal 
+	 transition: 'translate 0.1s ease' // CSS transition, added on elements where type:'foreground' 
 });  
   ```  
   
