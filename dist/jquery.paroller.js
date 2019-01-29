@@ -1,5 +1,5 @@
 /**
- * jQuery plugin paroller.js v1.4.5
+ * jQuery plugin paroller.js v1.4.6
  * https://github.com/tgomilar/paroller.js
  * preview: https://tgomilar.github.io/paroller/
  **/
@@ -33,7 +33,7 @@
             return elem.css({
                 '-webkit-transform': 'translateY(' + elemOffset + 'px)' + oldTransform,
                 '-moz-transform': 'translateY(' + elemOffset + 'px)' + oldTransform,
-                'transform': 'translateY(' + elemOffset + 'px)' + oldTransform,
+                'transform': 'translate(0,' + elemOffset + 'px)' + oldTransform,
                 'transition': transition,
                 'will-change': 'transform'
             });
@@ -43,7 +43,7 @@
             return elem.css({
                 '-webkit-transform': 'translateX(' + elemOffset + 'px)' + oldTransform,
                 '-moz-transform': 'translateX(' + elemOffset + 'px)' + oldTransform,
-                'transform': 'translateX(' + elemOffset + 'px)' + oldTransform,
+                'transform': 'translate(' + elemOffset + 'px, 0)' + oldTransform,
                 'transition': transition,
                 'will-change': 'transform'
             });
@@ -113,7 +113,7 @@
             factorMd: 0, // - to +
             factorLg: 0, // - to +
             factorXl: 0, // - to +
-            transition: 'translate 0.1s ease', // CSS transition
+            transition: 'transform .1s ease', // CSS transition
             type: 'background', // foreground
             direction: 'vertical' // horizontal
         }, options);

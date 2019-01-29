@@ -224,7 +224,7 @@
                 factorLg: 0.3,          // multiplier for scrolling speed and offset if window width is <=1200px
                 type: 'foreground',     // background, foreground
                 direction: 'horizontal' // vertical, horizontal
-                transition: 'translate 0.1s ease' // CSS transition, added on elements where type:'foreground'
+                transition: 'transform 0.1s ease' // CSS transition, added on elements where type:'foreground'
             });
             </pre>
         </div>
@@ -245,7 +245,7 @@
                 data-paroller-direction="horizontal"
                 data-paroller-transition="transform .2s linear"
             >
-                👋 Heola! こんにちは! Ahoj! Cześć! Olá!
+                👋 Heola! こんにちは! Ahoj! Merhaba! Olá!
             </h6>
             <div class="show-more"><i class="fa fa-code"></i></div>
             <div class="popover">
@@ -544,7 +544,8 @@
                 factorXl: -0.6,
                 factor: -0.4,
                 type: 'foreground',
-                direction: 'horizontal'
+                direction: 'horizontal',
+                transition: 'transform .3s ease-out'
             });
         });
 </script>

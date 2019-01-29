@@ -73,7 +73,7 @@ You can control parallax effect by data-paroller-* or jQuery values.
 | data-paroller-factor-lg | factorLg | number (+/-)  | 0 |  
 | data-paroller-type | type | background, foreground | background |  
 | data-paroller-direction | direction | vertical, horizontal | vertical |  
-| data-paroller-transition | transition | CSS transition | translate 0.1s ease |  
+| data-paroller-transition | transition | CSS transition | transform 0.1s ease |  
   
 ### data-paroller-factor  
 Sets speed and distance of element's parallax effect on scroll. Value can be positive (0.3) or negative (-0.3). Less means slower. Different sign (+/-) means different direction (up/down, left/right).  
@@ -101,7 +101,8 @@ $(".paroller, [data-paroller-factor]").paroller({
   factor: 0.2,            // multiplier for scrolling speed and offset, +- values for direction control  
   factorLg: 0.4,          // multiplier for scrolling speed and offset if window width is less than 1200px, +- values for direction control  
   type: 'foreground',     // background, foreground  
-  direction: 'horizontal' // vertical, horizontal  
+  direction: 'horizontal', // vertical, horizontal  
+  transition: 'translate 0.1s ease' // CSS transition, added on elements where type:'foreground' 
 });  
   ```  
 ##### Set factor breakpoints  
@@ -109,15 +110,15 @@ $(".paroller, [data-paroller-factor]").paroller({
 ```javascript  
 // initialize paroller.js and set attributes for selected elements  
 $(".paroller, [data-paroller-factor]").paroller({  
-	 factor: 0.3,            // +/-, if no other breakpoint factor is set this value is selected  
-	 factorXs: 0.1,          // factorXs, factorSm, factorMd, factorLg, factorXl      
-	 factorSm: 0.2,          // factorXs, factorSm, factorMd, factorLg, factorXl      
-	 factorMd: 0.3,          // factorXs, factorSm, factorMd, factorLg, factorXl      
-	 factorLg: 0.4,          // factorXs, factorSm, factorMd, factorLg, factorXl
-	 factorXl: 0.5  	     // factorXs, factorSm, factorMd, factorLg, factorXl
-	 type: 'foreground',     // background, foreground  
-	 direction: 'horizontal',// vertical, horizontal 
-	 transition: 'translate 0.1s ease' // CSS transition, added on elements where type:'foreground' 
+    factor: 0.3,        // +/-, if no other breakpoint factor is set this value is selected  
+    factorXs: 0.1,      // factorXs, factorSm, factorMd, factorLg, factorXl      
+    factorSm: 0.2,      // factorXs, factorSm, factorMd, factorLg, factorXl      
+    factorMd: 0.3,      // factorXs, factorSm, factorMd, factorLg, factorXl      
+    factorLg: 0.4,      // factorXs, factorSm, factorMd, factorLg, factorXl
+    factorXl: 0.5       // factorXs, factorSm, factorMd, factorLg, factorXl
+    type: 'foreground',     // background, foreground  
+    direction: 'horizontal',// vertical, horizontal 
+    transition: 'translate 0.1s ease' // CSS transition, added on elements where type:'foreground' 
 });  
   ```  
   
