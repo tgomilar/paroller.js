@@ -131,7 +131,7 @@
                 if (! scrollTop) {
                     scrollOffset = transform;
                 }
-                console.log(`offset ${scrollOffset} => ${transform - scrollOffset}`)
+                // console.log(`offset ${scrollOffset} => ${transform - scrollOffset}`)
                 return transform - scrollOffset;
             }
 
