@@ -4,7 +4,8 @@
   "description": "Parallax scrolling jQuery plugin",
   "main": "dist/jquery.paroller.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "minify": "node-minify -c babel-minify -i dist/jquery.paroller.js -o dist/jquery.paroller.min.js"
   },
   "repository": {
     "type": "git",
@@ -27,5 +28,8 @@
   "bugs": {
     "url": "https://github.com/tgomilar/paroller.js/issues"
   },
-  "homepage": "https://tgomilar.github.io/paroller.js/"
+  "homepage": "https://tgomilar.github.io/paroller.js/",
+  "devDependencies": {
+    "node-minify": "^3.6.0"
+  }
 }

@@ -131,6 +131,7 @@
                 if (! scrollTop) {
                     scrollOffset = transform;
                 }
+                console.log(`offset ${scrollOffset} => ${transform - scrollOffset}`)
                 return transform - scrollOffset;
             }
 
@@ -198,7 +199,7 @@
                 }
             });
 
-            $(window).on('scroll', function () {
+            $(window).on('load scroll', function () {
                 let scrolling = $(this).scrollTop();
                 let scrollTop = $(document).scrollTop();
                 factor = setMovement.factor($this, width, options);
