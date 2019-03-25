@@ -122,6 +122,7 @@
             var $this = $(this);
             var width = $(window).width();
             var offset = $this.offset().top;
+            var scrollOffset = 0;
             var height = $this.outerHeight();
 
             var dataType = $this.data('paroller-type');
@@ -161,7 +162,11 @@
                 factor = setMovement.factor($this, width, options);
 
                 bgOffset = Math.round(offset * factor);
-                transform = Math.round((offset - (windowHeight / 2) + height) * factor);
+                let transformPre = Math.round((offset - (windowHeight / 2) + height) * factor);
+                if (!scrollTop) {
+                  scrollOffset = transformPre
+                }
+                transform = transformPre - scrollOffset
 
                 if (! working) {
                     window.requestAnimationFrame(scrollAction);
@@ -191,15 +196,12 @@
             $(window).on('scroll', function () {
                 var scrolling = $(this).scrollTop();
                 var scrollTop = $(document).scrollTop();
-
-                if (scrollTop === 0) {
-                    factor = 0;
-                } else {
-                    factor = setMovement.factor($this, width, options);
+                factor = setMovement.factor($this, width, options);
+                let transformPre = Math.round(((offset - (windowHeight / 2) + height) - scrolling) * factor);
+                if (!scrollTop) {
+                  scrollOffset = transformPre
                 }
-
-                bgOffset = Math.round((offset - scrolling) * factor);
-                transform = Math.round(((offset - (windowHeight / 2) + height) - scrolling) * factor);
+                transform = transformPre - scrollOffset
 
                 if (! working) {
                     window.requestAnimationFrame(scrollAction);
