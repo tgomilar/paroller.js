@@ -16,11 +16,6 @@
 })(function ($) {
   "use strict";
 
-  var working = false;
-  var scrollAction = function () {
-    working = false;
-  };
-
   var setDirection = {
     bgVertical: function (elem, bgOffset) {
       return elem.css({ "background-position": "center " + -bgOffset + "px" });
@@ -98,6 +93,8 @@
     },
   };
 
+  var working = false;
+
   $.fn.paroller = function (options) {
     var windowHeight = $(window).height();
     var documentHeight = $(document).height();
@@ -151,20 +148,7 @@
         }
       }
 
-      $(window).on("resize", function () {
-        var scrolling = $(this).scrollTop();
-        width = $(window).width();
-        offset = $this.offset().top;
-        height = $this.outerHeight();
-        factor = setMovement.factor($this, width, options);
-        bgOffset = Math.round((offset - scrolling) * factor);
-        transform = Math.round((offset - windowHeight / 2 + height - scrolling) * factor);
-
-        if (!working) {
-          window.requestAnimationFrame(scrollAction);
-          working = true;
-        }
-
+      var resizeAction = function (scrolling) {
         if (type === "background") {
           clearPositions.background($this);
           if (direction === "vertical") {
@@ -180,26 +164,10 @@
             setDirection.horizontal($this, transform, transition);
           }
         }
-      });
+        working = false;
+      };
 
-      $(window).on("scroll", function () {
-        var scrolling = $(this).scrollTop();
-        var inViewport = offset < scrolling + windowHeight && offset + height > scrolling;
-
-        if (type === "background" && scrolling === 0) {
-          factor = 0;
-        } else {
-          factor = setMovement.factor($this, width, options);
-        }
-
-        bgOffset = Math.round((offset - scrolling) * factor);
-        transform = Math.round((offset - windowHeight / 2 + height - scrolling) * factor);
-
-        if (!working) {
-          window.requestAnimationFrame(scrollAction);
-          working = true;
-        }
-
+      var scrollAction = function (scrolling, inViewport) {
         if (type === "background" && inViewport) {
           if (direction === "vertical") {
             setDirection.bgVertical($this, bgOffset);
@@ -213,6 +181,45 @@
             setDirection.horizontal($this, transform, transition, oldTransform);
           }
         }
+        working = false;
+      };
+
+      $(window).on("resize", function () {
+        if (working) return;
+        working = true;
+
+        var scrolling = $(this).scrollTop();
+        width = $(window).width();
+        offset = $this.offset().top;
+        height = $this.outerHeight();
+        factor = setMovement.factor($this, width, options);
+        bgOffset = Math.round((offset - scrolling) * factor);
+        transform = Math.round((offset - windowHeight / 2 + height - scrolling) * factor);
+
+        window.requestAnimationFrame(function () {
+          resizeAction(scrolling);
+        });
+      });
+
+      $(window).on("scroll", function () {
+        if (working) return;
+        working = true;
+
+        var scrolling = $(this).scrollTop();
+        var inViewport = offset < scrolling + windowHeight && offset + height > scrolling;
+
+        if (type === "background" && scrolling === 0) {
+          factor = 0;
+        } else {
+          factor = setMovement.factor($this, width, options);
+        }
+
+        bgOffset = Math.round((offset - scrolling) * factor);
+        transform = Math.round((offset - windowHeight / 2 + height - scrolling) * factor);
+
+        window.requestAnimationFrame(function () {
+          scrollAction(scrolling, inViewport);
+        });
       });
     });
   };
